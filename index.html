@@ -5,45 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Tales Store</title>
     <link rel="stylesheet" href="style.css">
-    <img src="images/your-image.jpg" alt="Candle Image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Homepage Banner -->
-    <header id="home">
+    <header>
+        <nav>
+            <div class="logo">Creative Tales Store</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
         <h1>Welcome to Creative Tales Store</h1>
         <p>Handmade Scented Candles for Every Mood</p>
-    </header>
-
-    <!-- Product Categories -->
-    <section id="products">
+    </section>
+    
+    <section id="products" class="categories">
         <h2>Our Candle Collections</h2>
-        <div class="category">
-            <img src="images/aromatic.jpg" alt="Aromatic Candles">
-            <h3>Aromatic Candles</h3>
-        </div>
-        <div class="category">
-            <img src="images/soy.jpg" alt="Soy Wax Candles">
-            <h3>Soy Wax Candles</h3>
-        </div>
-        <div class="category">
-            <img src="images/gift.jpg" alt="Gift Sets">
-            <h3>Gift Candle Sets</h3>
+        <div class="category-container">
+            <div class="category">
+                <img src="images/pillar.jpg" alt="Pillar Candles">
+                <p>Pillar Candles</p>
+            </div>
+            <div class="category">
+                <img src="images/flower.jpg" alt="Flower Candles">
+                <p>Flower Candles</p>
+            </div>
+            <div class="category">
+                <img src="images/glass.jpg" alt="Glass Candles">
+                <p>Glass Candles</p>
+            </div>
+            <div class="category">
+                <img src="images/tlight.jpg" alt="T-Light Candles">
+                <p>T-Light Candles</p>
+            </div>
         </div>
     </section>
-
-    <!-- Footer -->
+    
     <footer>
-        <p>© 2024 Creative Tales Store | All Rights Reserved</p>
+        <div class="social-media">
+            <a href="https://instagram.com/creativetalesstore" target="_blank">
+                <i class="fab fa-instagram"></i> @creativetalesstore
+            </a>
+            <a href="https://wa.me/yourwhatsappnumber" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+        <p>&copy; 2024 Creative Tales Store | All Rights Reserved</p>
     </footer>
 </body>
 </html>
