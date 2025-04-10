@@ -2,14 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Creative Tales Store</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff3e6;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff0e6;
+      padding: 10px 20px;
+      border-bottom: 2px solid #ffcc99;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff7a1c;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #ff7a1c;
+    }
+
+    .contact-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+
+    .contact-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 0 auto;
+      gap: 40px;
+      text-align: left;
+    }
+
+    .contact-list {
+      flex: 1;
+      min-width: 280px;
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    .contact-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-list li::before {
+      content: '✔';
+      color: green;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: none;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      background-color: #ff914d;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #e76f3c;
+    }
+
+    .contact-info-boxes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .info-box {
+      background-color: #fffaf5;
+      border: 2px solid #ffcc99;
+      border-radius: 12px;
+      padding: 25px 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-box h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #ff7a1c;
+    }
+
+    .info-box p {
+      margin: 6px 0;
+      color: #555;
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ffcc99;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .contact-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .info-box {
+        width: 90%;
+      }
+
+      .contact-form button {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header Section -->
   <header>
     <nav>
       <div class="logo-container">
@@ -25,60 +228,53 @@
     </nav>
   </header>
 
-<section id="contact" class="contact" style="padding: 40px; background: #fff0e6;">
-  <!-- Centered heading -->
-  <div style="text-align: center;">
+  <section class="contact-section">
     <h2>Contact Us</h2>
     <p>We’d love to hear from you! Let’s create something beautiful together 🌟</p>
-  </div>
 
-  <div class="contact-content">
-  <div class="contact-list">
-    <ul>
-      <li>We listen</li>
-      <li>We design</li>
-      <li>We customize</li>
-      <li>We deliver magic</li>
-    </ul>
-  </div>
+    <div class="contact-content">
+      <div class="contact-list">
+        <ul>
+          <li>We listen</li>
+          <li>We design</li>
+          <li>We customize</li>
+          <li>We deliver magic</li>
+        </ul>
+      </div>
 
-  <div class="contact-form">
-    <form id="whatsappForm">
-      <input type="text" id="name" placeholder="Your Name*" required />
-      <input type="email" id="email" placeholder="Email*" required />
-      <input type="tel" id="phone" placeholder="Phone (numbers only)*" required />
-      <textarea id="message" rows="4" placeholder="Tell us what you’re looking for*" required></textarea>
-      <button type="submit">Send to WhatsApp</button>
-    </form>
-  </div>
-</div>
+      <div class="contact-form">
+        <form id="whatsappForm">
+          <input type="text" id="name" placeholder="Your Name*" required />
+          <input type="email" id="email" placeholder="Email*" required />
+          <input type="tel" id="phone" placeholder="Phone (numbers only)*" required />
+          <textarea id="message" placeholder="Tell us what you’re looking for*" required></textarea>
+          <button type="submit">Send to WhatsApp</button>
+        </form>
+      </div>
+    </div>
 
+    <div class="contact-info-boxes">
+      <div class="info-box">
+        <h3>🕒 Opening Hours</h3>
+        <p>Mon - Sat: 10 AM to 7 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
 
-  <!-- Box with contact info -->
- <div class="contact-info-boxes">
-  <div class="info-box">
-    <h3>🕒 Opening Hours</h3>
-    <p>Mon - Sat: 10 AM to 7 PM</p>
-    <p>Sunday: Closed</p>
-  </div>
+      <div class="info-box">
+        <h3>📞 Call Us</h3>
+        <p>+91-9876543210</p>
+        <p>Mon-Sat, 10 AM - 7 PM</p>
+      </div>
 
-  <div class="info-box">
-    <h3>📞 Call Us</h3>
-    <p>+91-9876543210</p>
-    <p>Mon-Sat, 10 AM - 7 PM</p>
-  </div>
+      <div class="info-box">
+        <h3>✉️ Write to Us</h3>
+        <p>creativetalesstore@gmail.com</p>
+        <p>We’ll get back to you ASAP</p>
+      </div>
+    </div>
+  </section>
 
-  <div class="info-box">
-    <h3>✉️ Write to Us</h3>
-    <p>creativetalesstore@gmail.com</p>
-    <p>We’ll get back to you ASAP</p>
-  </div>
-</div>
-
-
-
-  <!-- Footer -->
-  <footer style="background-color:#333; color:white; padding:20px 10px; text-align:center;">
+  <footer>
     <p style="margin-bottom: 10px; font-size: 16px;">Contact us on</p>
     <div class="social-media" style="margin-bottom: 10px;">
       <a href="https://instagram.com/creativetalesstore" target="_blank" style="color:white; margin: 0 10px;">
@@ -89,12 +285,11 @@
       </a>
     </div>
     <div>
-      <a href="faq.html" style="color: #ffcc99;">FAQ</a>
+      <a href="faq.html">FAQ</a>
     </div>
     <p style="margin-top: 10px;">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
   </footer>
 
-  <!-- WhatsApp Form Script -->
   <script>
     document.getElementById("whatsappForm").addEventListener("submit", function (e) {
       e.preventDefault();
@@ -112,6 +307,5 @@
       window.open(whatsappURL, "_blank");
     });
   </script>
-
 </body>
 </html>
