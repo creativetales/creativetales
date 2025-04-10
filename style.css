@@ -197,10 +197,9 @@ nav ul li a {
   margin: 10px auto;
 }
 
-/* Contact Section */
 #contact {
   padding: 50px 20px;
-  background-color: #f9f9f9;
+  background-color: #fff4ea;
 }
 
 .contact-wrapper {
@@ -209,13 +208,37 @@ nav ul li a {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
-.contact-form,
-.contact-info-box {
+.contact-steps {
   flex: 1 1 300px;
+}
+
+.contact-steps h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-steps p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.contact-steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-steps li::before {
+  content: "✔";
+  color: #ff9966;
+  margin-right: 10px;
+}
+
+.contact-form {
+  flex: 1 1 350px;
 }
 
 .contact-form form {
@@ -230,6 +253,13 @@ nav ul li a {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 .contact-form button {
@@ -247,41 +277,19 @@ nav ul li a {
   background-color: #ff7744;
 }
 
-.contact-info-box h3 {
-  margin-top: 0;
-  color: #333;
-}
-
-.contact-info-box p {
-  margin: 8px 0;
-  font-size: 16px;
-  color: #555;
-}
-
-.contact-info-box i {
-  margin-right: 8px;
-  color: #ff9966;
-}
-
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    background-color: #ff9966;
-  }
-
-  .category-container,
-  .product-container {
+  .contact-wrapper {
     flex-direction: column;
     align-items: center;
   }
 
-  .product-card,
-  .category {
-    width: 90%;
+  .contact-form,
+  .contact-steps {
+    width: 100%;
   }
 }
+
 
 /* Additional Contact & Quote Section styles are same and merged for optimization */
 
