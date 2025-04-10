@@ -32,30 +32,27 @@
     <p>We’d love to hear from you! Let’s create something beautiful together 🌟</p>
   </div>
 
-  <!-- Flex container for points + form -->
-  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
-
-    <!-- Left column with tick points -->
-    <div style="flex: 1; min-width: 250px; font-size: 18px;">
-      <ul style="list-style: none; padding: 0; line-height: 2;">
-        <li>✔ We listen</li>
-        <li>✔ We design</li>
-        <li>✔ We customize</li>
-        <li>✔ We deliver magic</li>
-      </ul>
-    </div>
-
-    <!-- Right column with form -->
-    <div style="flex: 1; min-width: 320px;">
-      <form id="whatsappForm" style="display: flex; flex-direction: column; gap: 15px;">
-        <input type="text" id="name" placeholder="Your Name*" required />
-        <input type="email" id="email" placeholder="Email*" required />
-        <input type="tel" id="phone" placeholder="Phone (numbers only)*" required />
-        <textarea id="message" rows="4" placeholder="Tell us what you’re looking for*" required></textarea>
-        <button type="submit" style="background-color: #ff9955; border: none; padding: 10px; color: white; font-size: 16px;">Send to WhatsApp</button>
-      </form>
-    </div>
+  <div class="contact-content">
+  <div class="contact-list">
+    <ul>
+      <li>We listen</li>
+      <li>We design</li>
+      <li>We customize</li>
+      <li>We deliver magic</li>
+    </ul>
   </div>
+
+  <div class="contact-form">
+    <form id="whatsappForm">
+      <input type="text" id="name" placeholder="Your Name*" required />
+      <input type="email" id="email" placeholder="Email*" required />
+      <input type="tel" id="phone" placeholder="Phone (numbers only)*" required />
+      <textarea id="message" rows="4" placeholder="Tell us what you’re looking for*" required></textarea>
+      <button type="submit">Send to WhatsApp</button>
+    </form>
+  </div>
+</div>
+
 
   <!-- Box with contact info -->
   <div class="contact-info-box" style="margin-top: 40px; padding: 25px; border: 2px solid #ffcc99; background-color: #fffaf5; border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
