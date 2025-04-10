@@ -25,49 +25,51 @@
     </nav>
   </header>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact" style="padding: 40px; background: #fff0e6;">
-    <h2 style="text-align:center;">Contact Us</h2>
-    <p style="text-align:center;">We’d love to hear from you! Let’s create something beautiful together 🌟</p>
-    <ul class="steps" style="text-align:center; list-style: none; padding: 0;">
-      <li><span>✔</span> We listen</li>
-      <li><span>✔</span> We design</li>
-      <li><span>✔</span> We customize</li>
-      <li><span>✔</span> We deliver magic</li>
-    </ul>
+<section id="contact" class="contact" style="padding: 40px; background: #fff0e6;">
+  <!-- Centered heading -->
+  <div style="text-align: center;">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Let’s create something beautiful together 🌟</p>
+  </div>
 
-    <!-- Flex layout for form alignment -->
-    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 30px;">
-      
-      <!-- Left space or optional content -->
-      <div style="flex: 1; min-width: 250px;"></div>
+  <!-- Flex container for points + form -->
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
 
-      <!-- Contact Form on Right -->
-      <div style="flex: 1; min-width: 350px;">
-        <form id="whatsappForm" style="display: flex; flex-direction: column; gap: 15px;">
-          <input type="text" id="name" placeholder="Your Name*" required />
-          <input type="email" id="email" placeholder="Email*" required />
-          <input type="tel" id="phone" placeholder="Phone (numbers only)*" required />
-          <textarea id="message" rows="4" placeholder="Tell us what you’re looking for*" required></textarea>
-          <button type="submit" style="background-color: #ff9955; border: none; padding: 10px; color: white; font-size: 16px;">Send to WhatsApp</button>
-        </form>
-
-        <!-- Additional Text and Contact Info -->
-        <p style="margin-top: 25px; font-size: 16px;">Still have questions? Feel free to connect with us here:</p>
-        
-        <div class="contact-info-box" style="margin-top: 10px;">
-          <h3 style="margin: 8px 0;">📞 Call Us</h3>
-          <p>+91 8421951707</p>
-
-          <h3 style="margin: 8px 0;">📧 Write Us</h3>
-          <p>support@thecandlestore.in</p>
-
-          <h3 style="margin: 8px 0;">⏰ Opening Hour</h3>
-          <p>9:00 – 18:00</p>
-        </div>
-      </div>
+    <!-- Left column with tick points -->
+    <div style="flex: 1; min-width: 250px; font-size: 18px;">
+      <ul style="list-style: none; padding: 0; line-height: 2;">
+        <li>✔ We listen</li>
+        <li>✔ We design</li>
+        <li>✔ We customize</li>
+        <li>✔ We deliver magic</li>
+      </ul>
     </div>
-  </section>
+
+    <!-- Right column with form -->
+    <div style="flex: 1; min-width: 320px;">
+      <form id="whatsappForm" style="display: flex; flex-direction: column; gap: 15px;">
+        <input type="text" id="name" placeholder="Your Name*" required />
+        <input type="email" id="email" placeholder="Email*" required />
+        <input type="tel" id="phone" placeholder="Phone (numbers only)*" required />
+        <textarea id="message" rows="4" placeholder="Tell us what you’re looking for*" required></textarea>
+        <button type="submit" style="background-color: #ff9955; border: none; padding: 10px; color: white; font-size: 16px;">Send to WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Box with contact info -->
+  <div class="contact-info-box" style="margin-top: 40px; padding: 25px; border: 2px solid #ffcc99; background-color: #fffaf5; border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
+    <h3 style="margin: 8px 0;">⏰ Opening Hours</h3>
+    <p>9:00 – 18:00</p>
+
+    <h3 style="margin: 15px 0 8px;">📧 Write Us</h3>
+    <p>support@thecandlestore.in</p>
+
+    <h3 style="margin: 15px 0 8px;">📞 Call Us</h3>
+    <p>+91 8421951707</p>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer style="background-color:#333; color:white; padding:20px 10px; text-align:center;">
