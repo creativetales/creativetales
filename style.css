@@ -324,3 +324,113 @@ form button {
 form button:hover {
   background-color: #1ebd5b;
 }
+
+
+/* Quote Section */
+.quote-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 30px;
+  background-color: #fff8f0;
+  border-top: 2px solid #ffd6ba;
+}
+
+.quote-left, .quote-right {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+}
+
+.quote-left h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.quote-left p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.quote-left .steps {
+  list-style: none;
+  padding: 0;
+}
+
+.quote-left .steps li {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #444;
+}
+
+.quote-left .steps li span {
+  color: green;
+  margin-right: 10px;
+}
+
+/* Form Styling */
+.quote-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quote-right input,
+.quote-right textarea {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.quote-right button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #ff9966;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quote-right button:hover {
+  background-color: #e67e22;
+}
+
+/* Contact Links Section */
+.contact-links {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fff0e6;
+  border-top: 2px solid #ffd6ba;
+}
+
+.contact-links p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.contact-links a img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.contact-links a:hover {
+  transform: scale(1.05);
+  color: #ff7f50;
+}
