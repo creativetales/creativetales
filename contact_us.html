@@ -25,74 +25,44 @@
     </nav>
   </header>
 
-  <!-- Contact Form Section -->
-  <section class="quote-section">
-    <div class="quote-left">
-      <h2>Contact Us</h2>
-      <p>We’d love to hear from you! Let’s create something beautiful together 🌟</p>
-      <ul class="steps">
-        <li><span>✔</span> We listen</li>
-        <li><span>✔</span> We design</li>
-        <li><span>✔</span> We customize</li>
-        <li><span>✔</span> We deliver magic</li>
-      </ul>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Let’s create something beautiful together 🌟</p>
+    <ul class="steps">
+      <li><span>✔</span> We listen</li>
+      <li><span>✔</span> We design</li>
+      <li><span>✔</span> We customize</li>
+      <li><span>✔</span> We deliver magic</li>
+    </ul>
+
+    <div class="contact-wrapper">
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form id="whatsappForm">
+          <input type="text" id="name" placeholder="Your Name*" required>
+          <input type="email" id="email" placeholder="Email*" required>
+          <input type="tel" id="phone" placeholder="Phone (numbers only)*" required>
+          <textarea id="message" rows="4" placeholder="Tell us what you’re looking for*" required></textarea>
+          <button type="submit">Send to WhatsApp</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info-box">
+        <h3>📞 Call Us</h3>
+        <p>+91 8421951707</p>
+
+        <h3>📧 Write Us</h3>
+        <p>support@thecandlestore.in</p>
+
+        <h3>⏰ Opening Hour</h3>
+        <p>9:00 – 18:00</p>
+      </div>
+
     </div>
-
-  <section id="contact">
-  <div class="contact-wrapper">
-
-    <div class="contact-steps">
-      <h2>Contact Us</h2>
-      <p>We’d love to hear from you! Let’s create something beautiful together 🌟</p>
-      <ul>
-        <li>We listen</li>
-        <li>We design</li>
-        <li>We customize</li>
-        <li>We deliver magic</li>
-      </ul>
-    </div>
-
-    <div class="contact-form">
-      <form>
-        <input type="text" placeholder="Your Name*" required>
-        <input type="email" placeholder="Email*" required>
-        <input type="tel" placeholder="Phone (numbers only)*" required>
-        <textarea placeholder="Tell us what you’re looking for*" required></textarea>
-        <button type="submit">Send to WhatsApp</button>
-      </form>
-    </div>
-
-  </div>
-</section>
-
-
-<section id="contact">
-  <div class="contact-wrapper">
-    
-    <div class="contact-form">
-      <form>
-        <input type="text" placeholder="Your Name*" required>
-        <input type="email" placeholder="Email*" required>
-        <input type="tel" placeholder="Phone (numbers only)*" required>
-        <textarea rows="4" placeholder="Tell us what you’re looking for*" required></textarea>
-        <button type="submit">Send to WhatsApp</button>
-      </form>
-    </div>
-
-    <div class="contact-info-box">
-      <h3>📞 Call Us</h3>
-      <p>+91 8421951707</p>
-
-      <h3>📧 Write Us</h3>
-      <p>support@thecandlestore.in</p>
-
-      <h3>⏰ Opening Hour</h3>
-      <p>9:00 – 18:00</p>
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- Contact Links -->
   <div class="contact-links" style="text-align:center; padding: 30px; background:#fff0e6;">
@@ -138,11 +108,7 @@
       const phone = document.getElementById("phone").value;
       const message = document.getElementById("message").value;
 
-      const whatsappMsg = `Hello! I'm ${name}.
-Email: ${email}
-Phone: ${phone}
-Message: ${message}`;
-
+      const whatsappMsg = `Hello! I'm ${name}.\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
       const encodedMsg = encodeURIComponent(whatsappMsg);
       const whatsappNumber = "918421951707";
       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;
