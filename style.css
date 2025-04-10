@@ -256,3 +256,71 @@ nav ul li a {
         width: 90%;
     }
 }
+
+.quote-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px;
+  background: #fff;
+}
+
+.quote-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.quote-left h2 {
+  font-size: 32px;
+  color: #1d1d35;
+}
+
+.quote-left p {
+  margin: 10px 0 20px;
+  color: #666;
+}
+
+.steps li {
+  list-style: none;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #1d1d35;
+}
+
+.steps li span {
+  background: #1d1d35;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.quote-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+form button {
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1ebd5b;
+}
