@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #fff3e6;
   color: #333;
   line-height: 1.6;
 }
@@ -66,7 +66,6 @@ nav ul li a:hover {
   border-radius: 6px;
   color: #ff6600;
 }
-
 
 /* Hero Section */
 .hero {
@@ -148,16 +147,6 @@ nav ul li a:hover {
 }
 
 /* Contact Us Section */
-/* ========== General Reset & Page Background ========== */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff3e6;
-  color: #333;
-}
-
-/* ========== Contact Us Section ========== */
 .contact-section {
   padding: 60px 20px;
   text-align: center;
@@ -170,7 +159,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* ========== Flex Layout for Tick Points + Form ========== */
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -182,7 +170,6 @@ body {
   text-align: left;
 }
 
-/* ========== Tick Points (Left Side) ========== */
 .contact-points {
   flex: 1;
   min-width: 280px;
@@ -202,7 +189,6 @@ body {
   font-weight: bold;
 }
 
-/* ========== Contact Form (Right Side) ========== */
 .contact-form {
   flex: 1;
   min-width: 300px;
@@ -239,7 +225,6 @@ body {
   background-color: #e76f3c;
 }
 
-/* ========== Info Boxes Below Form ========== */
 .contact-info-boxes {
   display: flex;
   justify-content: center;
@@ -276,7 +261,6 @@ body {
   font-size: 16px;
 }
 
-/* ========== Responsive ========== */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
@@ -291,7 +275,6 @@ body {
     font-size: 16px;
   }
 }
-
 
 /* Footer */
 footer {
