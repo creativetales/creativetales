@@ -1,38 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Creative Tales Store</title>
-    <link rel="stylesheet" href="contact.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <section id="contact">
-        <h2>We’d love to hear from you!</h2>
-        <p>We are available from Monday to Saturday, 10:30 AM - 6:30 PM IST</p>
-        <div class="contact-container">
-            <!-- Call -->
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <p>Call</p>
-                <a href="tel:+918421951707">+91 84219 51707</a>
-            </div>
-            <!-- WhatsApp -->
-            <div class="contact-item">
-                <i class="fab fa-whatsapp"></i>
-                <p>WhatsApp</p>
-                <a href="https://wa.me/918421951707?text=Welcome%20to%20Creative%20Tales%20Store!%20How%20may%20we%20help%20you?" target="_blank">
-                    Chat on WhatsApp
-                </a>
-            </div>
-            <!-- Email -->
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <p>Email</p>
-                <a href="mailto:creativetalesstore@gmail.com">creativetalesstore@gmail.com</a>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+<section class="quote-section">
+  <div class="quote-left">
+    <h2>Get a quote</h2>
+    <p>Would you love to set up a time to chat? Let us know if you’re interested.</p>
+    <ul class="steps">
+      <li><span>✔</span> 1st we will talk</li>
+      <li><span>✔</span> 2nd we will ask</li>
+      <li><span>✔</span> 3rd we will estimate</li>
+      <li><span>✔</span> 4th we will deliver</li>
+    </ul>
+  </div>
+
+  <div class="quote-right">
+    <form id="whatsappForm">
+      <input type="text" id="name" placeholder="Name*" required />
+      <input type="text" id="role" placeholder="Role*" required />
+      <input type="text" id="company" placeholder="Company*" required />
+      <input type="email" id="email" placeholder="Email*" required />
+      <input type="text" id="phone" placeholder="Phone (numbers only)*" required />
+      <textarea id="message" placeholder="Tell us something about your project*" rows="4" required></textarea>
+      <button type="submit">Send to WhatsApp</button>
+    </form>
+  </div>
+</section>
