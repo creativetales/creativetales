@@ -253,22 +253,39 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p style="font-size: 16px; margin-bottom: 10px;">Contact us on</p>
-    <div class="social-icons">
-      <a href="https://instagram.com/creativetalesstore" target="_blank" title="Instagram">
-        <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" />
+  <footer>
+    <p style="margin-bottom: 10px; font-size: 16px;">Contact us on</p>
+    <div class="social-media" style="margin-bottom: 10px;">
+      <a href="https://instagram.com/creativetalesstore" target="_blank" style="color:white; margin: 0 10px;">
+        <i class="fab fa-instagram"></i> @creativetalesstore
       </a>
-      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" title="WhatsApp">
-        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp" />
+      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" style="color:white; margin: 0 10px;">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
       </a>
     </div>
-    <div style="margin-top: 10px;">
-      <a href="faq.html" style="color: #fff; text-decoration: underline;">FAQ</a>
+    <div>
+      <a href="faq.html">FAQ</a>
     </div>
-    <p>&copy; 2024 Creative Tales Store | All Rights Reserved</p>
+    <p style="margin-top: 10px;">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
   </footer>
+
+  <script>
+    document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const message = document.getElementById("message").value;
+
+      const whatsappMsg = `Hello! I'm ${name}.\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+      const encodedMsg = encodeURIComponent(whatsappMsg);
+      const whatsappNumber = "918421951707";
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
 
 </body>
 </html>
