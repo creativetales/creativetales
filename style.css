@@ -116,36 +116,106 @@ body {
 }
 
 /* Contact Us Section */
-.contact {
-  padding: 60px 20px;
-  background-color: #fff0e6;
+/* ========== General Reset & Page Background ========== */
+body {
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.contact h2 {
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  background-color: #fff3e6;
   color: #333;
 }
 
-.contact p {
+/* ========== Contact Us Section ========== */
+.contact-section {
+  padding: 60px 20px;
   text-align: center;
-  font-size: 18px;
-  color: #444;
 }
 
-/* Info Boxes Layout */
+.contact-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* ========== Flex Layout for Tick Points + Form ========== */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+  text-align: left;
+}
+
+/* ========== Tick Points (Left Side) ========== */
+.contact-points {
+  flex: 1;
+  min-width: 280px;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.contact-points ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-points li::before {
+  content: '✔';
+  color: green;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* ========== Contact Form (Right Side) ========== */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  width: 100%;
+  background-color: #ff914d;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e76f3c;
+}
+
+/* ========== Info Boxes Below Form ========== */
 .contact-info-boxes {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
-/* Individual Info Box */
 .info-box {
   background-color: #fffaf5;
   border: 2px solid #ffcc99;
@@ -174,120 +244,22 @@ body {
   font-size: 16px;
 }
 
-/* Responsive Design */
+/* ========== Responsive ========== */
 @media (max-width: 768px) {
-  .info-box {
-    width: 90%;
-  }
-}
-
-
-/* Flexbox layout for points + form */
-.contact-content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 50px;
-  margin-top: 40px;
-}
-
-/* Tickmark List (Left Side) */
-.contact-list {
-  flex: 1;
-  min-width: 250px;
-  font-size: 18px;
-  color: #222;
-}
-
-.contact-list ul {
-  list-style: none;
-  padding: 0;
-  line-height: 2;
-}
-
-.contact-list li::before {
-  content: '✔ ';
-  color: #ff9955;
-  font-weight: bold;
-}
-
-/* Contact Form (Right Side) */
-.contact-form {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px 15px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  width: 100%;
-  background-color: #fff;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-form button {
-  padding: 12px;
-  background-color: #ff9955;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #ff7a1c;
-}
-
-/* Contact Info Box */
-.contact-info-box {
-  margin-top: 60px;
-  padding: 30px;
-  border: 2px solid #ffcc99;
-  background-color: #fffaf5;
-  border-radius: 12px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.contact-info-box h3 {
-  margin-top: 20px;
-  color: #333;
-}
-
-.contact-info-box p {
-  margin: 5px 0;
-  color: #555;
-  font-size: 16px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-content {
+  .contact-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .contact-list,
-  .contact-form {
-    width: 100%;
+  .info-box {
+    width: 90%;
+  }
+
+  .contact-form button {
+    font-size: 16px;
   }
 }
+
 
 /* Footer */
 footer {
