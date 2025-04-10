@@ -1,222 +1,545 @@
-/* General Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* General Styles */
 body {
-  background-color: #fff7f0;
-  color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8f0;
 }
 
-/* Navbar Styles */
-.navbar {
-  background-color: #ff9966;
-  padding: 15px 0;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff9966;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  transition: color 0.3s;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
 }
 
-.navbar a:hover {
-  color: #fffde7;
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-/* Homepage - Hero Section */
-.hero {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #fff0e6;
+nav ul li {
+    margin: 0 15px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  color: #ff6600;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #444;
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
 
 /* Slider Section */
+/* Slider Styling */
 .slider {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
   display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 20px;
-  gap: 20px;
-  background-color: #fff0e6;
+  width: 400%;
+  height: 100%;
+  animation: slide 24s ease-in-out infinite;
 }
 
-.slider img {
-  height: 250px;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+.slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
 }
 
-.slider img:hover {
-  transform: scale(1.05);
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Products Section */
-.products {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #fffaf4;
+/* Keyframes */
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  20% { transform: translateX(0%); }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  95% { transform: translateX(-300%); }
+  100% { transform: translateX(0%); }
 }
 
-.products h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #ff6600;
+
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffe6cc;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+#home h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+#home p {
+    font-size: 20px;
+    color: #666;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Product Categories */
+.categories {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category {
+    width: 200px;
+}
+
+.category img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Product Section */
+.product-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fef7e5;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .product-card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+    transform: scale(1.05);
 }
 
 .product-card img {
-  width: 100%;
-  border-radius: 15px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .product-card h3 {
-  font-size: 1.2rem;
-  color: #ff6600;
-  margin: 10px 0 5px;
+    margin: 10px 0;
+    font-size: 18px;
 }
 
 .product-card p {
-  font-size: 0.9rem;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffe6cc;
+}
+
+.about h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.about p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container input,
+.contact-container textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-container button {
+    padding: 12px;
+    background-color: #ff9966;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+    background-color: #ff7744;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background-color: #ff9966;
+    }
+
+    .slides {
+        width: 400%;
+    }
+
+    .category-container,
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card,
+    .category {
+        width: 90%;
+    }
+}
+
+.quote-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px;
+  background: #fff;
+}
+
+.quote-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.quote-left h2 {
+  font-size: 32px;
+  color: #1d1d35;
+}
+
+.quote-left p {
+  margin: 10px 0 20px;
+  color: #666;
+}
+
+.steps li {
+  list-style: none;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #1d1d35;
+}
+
+.steps li span {
+  background: #1d1d35;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.quote-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+form button {
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1ebd5b;
+}
+
+
+/* Quote Section */
+.quote-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 30px;
+  background-color: #fff8f0;
+  border-top: 2px solid #ffd6ba;
+}
+
+.quote-left, .quote-right {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+}
+
+.quote-left h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.quote-left p {
+  font-size: 18px;
+  margin-bottom: 20px;
   color: #555;
 }
 
-/* Contact Us Page */
-.contact-section {
-  padding: 40px 20px;
-  background-color: #fff0e6;
-  text-align: center;
+.quote-left .steps {
+  list-style: none;
+  padding: 0;
 }
 
-.contact-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #ff6600;
-}
-
-.contact-section form {
-  max-width: 500px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-}
-
-.contact-section input,
-.contact-section textarea {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+.quote-left .steps li {
   font-size: 16px;
+  margin: 10px 0;
+  color: #444;
 }
 
-.contact-section button {
-  background-color: #ff9966;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.quote-left .steps li span {
+  color: green;
+  margin-right: 10px;
 }
 
-.contact-section button:hover {
-  background-color: #ff6600;
-}
-
-/* WhatsApp Floating Button */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+/* Form Styling */
+.quote-right form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 28px;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: transform 0.3s;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
+.quote-right input,
+.quote-right textarea {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
 }
 
-/* Footer Styles */
-.site-footer {
+.quote-right button {
+  padding: 12px;
+  font-size: 16px;
   background-color: #ff9966;
   color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 16px;
-  margin-top: 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+.quote-right button:hover {
+  background-color: #e67e22;
+}
 
-  .navbar {
+/* Contact Links Section */
+.contact-links {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fff0e6;
+  border-top: 2px solid #ffd6ba;
+}
+
+.contact-links p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.contact-links a img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.contact-links a:hover {
+  transform: scale(1.05);
+  color: #ff7f50;
+}
+
+/* Contact Us Section */
+.quote-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #fff6f0;
+    padding: 60px 20px;
+    border-radius: 16px;
+    max-width: 1100px;
+    margin: 40px auto;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    gap: 30px;
+}
+
+.quote-left, .quote-right {
+    flex: 1 1 450px;
+}
+
+.quote-left h2 {
+    font-size: 32px;
+    color: #d35400;
+    margin-bottom: 10px;
+}
+
+.quote-left p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.steps {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    color: #444;
+}
+
+.steps li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.steps li span {
+    color: #27ae60;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Form Styling */
+#whatsappForm {
+    display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-
-  .slider img {
-    height: 200px;
-  }
-
-  .product-card {
-    padding: 15px;
-  }
 }
+
+#whatsappForm input,
+#whatsappForm textarea {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: border 0.3s ease;
+}
+
+#whatsappForm input:focus,
+#whatsappForm textarea:focus {
+    border-color: #ff8c42;
+    outline: none;
+}
+
+#whatsappForm button {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #ff8c42;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+#whatsappForm button:hover {
+    background-color: #e07b36;
+}
+
+/* Contact Links Section */
+.contact-links {
+    background-color: #fff0e6;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.contact-links p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-links a {
+    display: inline-block; 
