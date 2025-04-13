@@ -411,3 +411,23 @@ nav ul li a:hover {
   width: 32px;
   height: 32px;
 }
+
+
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.whatsapp-chat img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-chat img:hover {
+  transform: scale(1.1);
+}
