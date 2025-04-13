@@ -2,76 +2,273 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Tales Store</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    /* WhatsApp Floating Button CSS */
-    .whatsapp-chat {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #fff8f2;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      padding: 15px 40px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
       z-index: 1000;
-      transition: transform 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .whatsapp-chat:hover {
-      transform: scale(1.1);
+    .logo-container {
+      display: flex;
+      align-items: center;
     }
 
-    .whatsapp-chat img {
-      width: 35px;
-      height: 35px;
+    .logo-img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ff6600;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #ffe4cc;
+      color: #ff6600;
+    }
+
+    /* Slider */
+    .slider {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+
+    .slides {
+      display: flex;
+      width: 400%;
+      animation: slideAnimation 16s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes slideAnimation {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(0); }
+      25% { transform: translateX(-100%); }
+      45% { transform: translateX(-100%); }
+      50% { transform: translateX(-200%); }
+      70% { transform: translateX(-200%); }
+      75% { transform: translateX(-300%); }
+      95% { transform: translateX(-300%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Sections */
+    section {
+      padding: 40px;
+    }
+
+    .intro h2, #home h1, .categories h2 {
+      color: #ff6600;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      text-align: center;
+    }
+
+    #home {
+      background-color: #fff0e6;
+      text-align: center;
+    }
+
+    #home p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .category-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .category {
+      text-align: center;
+    }
+
+    .category img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .category p {
+      margin-top: 10px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    /* Footer */
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .footer .social-icons {
+      margin: 10px 0;
+    }
+
+    .footer .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .footer .social-icons a:hover {
+      color: #ffcc99;
+    }
+
+    .footer a.faq-link {
+      color: #fff;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    .footer a.faq-link:hover {
+      color: #ffcc99;
+    }
+
+    .footer p {
+      margin-top: 10px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
+        <span class="logo-text">Creative Tales Store</span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="home">
-    <h1>Welcome to Creative Tales Store</h1>
-    <p>Discover our unique and handmade scented candles.</p>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Creative Tales Store offers beautifully crafted scented candles, perfect for gifts and home décor.</p>
-  </section>
-
-  <!-- Products Section -->
-  <section id="products">
-    <h2>Our Candles</h2>
-    <div class="products-container">
-      <img src="candle1.jpg" alt="Candle 1" />
-      <img src="candle2.jpg" alt="Candle 2" />
-      <img src="candle3.jpg" alt="Candle 3" />
+  <!-- Slider -->
+  <section class="slider">
+    <div class="slides">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/p2_-_Copy_r8uiuu.jpg" alt="Candle 1">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/wax_satches_vq5js5.jpg" alt="Candle 2">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/p4_-_Copy_dlwghj.jpg" alt="Candle 3">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257004/06_-_Copy_rgo0bj.jpg" alt="Candle 4">
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: creativetales@example.com</p>
-    <p>Instagram: @creativetalesstore</p>
+  <!-- Intro -->
+  <section class="intro">
+    <h2>Welcome to Creative Tales Store – Where Every Candle Tells a Story</h2>
+    <p>
+      Indulge your senses and elevate your space with our handcrafted <strong>premium scented candles</strong> — designed to bring warmth, elegance, and luxury to any room.
+      At Creative Tales Store, we blend the finest waxes with authentic fragrance oils to create candles that burn clean, last longer, and fill your home with captivating aromas.
+      Thoughtfully made, affordably priced, and eco-friendly, our candles are more than just decor—they're a sensory experience. ✨
+    </p>
+  </section>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to Creative Tales Store</h1>
+    <p>Handmade Scented Candles for Every Mood</p>
+  </section>
+
+  <!-- Product Categories -->
+  <section id="products" class="categories">
+    <h2>Our Candle Collections</h2>
+    <div class="category-container">
+      <div class="category">
+        <a href="pillar.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257835/pillar_candle_vlztay.jpg" alt="Pillar Candles">
+          <p>Pillar Candles</p>
+        </a>
+      </div>
+      <div class="category">
+        <a href="glass.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257004/06_-_Copy_rgo0bj.jpg" alt="Glass Candles">
+          <p>Glass Candles</p>
+        </a>
+      </div>
+      <div class="category">
+        <a href="Tlight.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/p5_-_Copy_kjbr0m.jpg" alt="T-Light Candles">
+          <p>T-Light Candles</p>
+        </a>
+      </div>
+      <div class="category">
+        <a href="Tinbox.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257023/WhatsApp_Image_2024-03-18_at_11.47.32_1_bl2bdw.jpg" alt="Tinbox Candles">
+          <p>Tinbox Candles</p>
+        </a>
+      </div>
+      <div class="category">
+        <a href="mould.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257834/mouldcandles_hav9ez.jpg" alt="Mould Candles">
+          <p>Mould Candles</p>
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- WhatsApp Floating Button -->
@@ -83,6 +280,26 @@
   >
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat"/>
   </a>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-heading" style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Contact us on</p>
+
+    <div class="social-icons">
+      <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i> @creativetalesstore
+      </a>
+      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+
+    <div style="margin-top: 10px;">
+      <a href="faq.html" class="faq-link">FAQ</a>
+    </div>
+
+    <p style="margin-top: 20px;">&copy; 2025 Creative Tales Store | All Rights Reserved</p>
+  </footer>
 
 </body>
-</html>
+</html> 
