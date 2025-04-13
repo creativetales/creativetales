@@ -2,13 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creative Tales Store - FAQs</title>
+  <link rel="stylesheet" href="style.css"> <!-- Your main stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #fffaf5;
       margin: 0;
       padding: 20px;
+    }
+
+    nav {
+      background-color: #fff7f0;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #9b4c2b;
+      font-weight: bold;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: bold;
+      color: #9b4c2b;
     }
 
     .faq-container {
@@ -52,10 +91,69 @@
       background-color: #fff0e5;
       border-radius: 0 0 10px 10px;
     }
+
+    footer.site-footer {
+      margin-top: 60px;
+      text-align: center;
+      background-color: #fff7f0;
+      padding: 20px;
+      border-top: 1px solid #e6dcd2;
+    }
+
+    .footer-heading {
+      font-weight: bold;
+      color: #9b4c2b;
+      margin-bottom: 10px;
+    }
+
+    .social-media {
+      margin-bottom: 10px;
+    }
+
+    .social-link {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #9b4c2b;
+      font-weight: bold;
+    }
+
+    .social-link i {
+      margin-right: 5px;
+    }
+
+    .faq-link {
+      display: block;
+      margin-top: 10px;
+      color: #9b4c2b;
+      text-decoration: underline;
+    }
+
+    .copyright {
+      font-size: 14px;
+      color: #8a6c5b;
+      margin-top: 15px;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
+        <span class="logo-text">Creative Tales Store</span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="contact_us.html">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FAQ Section -->
   <div class="faq-container">
     <h1 class="faq-title">Frequently Asked Questions</h1>
 
@@ -71,7 +169,7 @@
 
     <div class="faq-item">
       <div class="question">What if my product arrived damaged?</div>
-      <div class="answer">We take great care in packaging each candle to ensure it reaches you safely. However, in the rare case that your product arrives damaged, we offer a replacement. To process it smoothly, please share clear photos of the damage within 48 hours of delivery. We also recommend recording an unboxing video, as it helps us verify the issue quickly and ensures a hassle-free refund or replacement process.</div>
+      <div class="answer">We take great care in packaging each candle to ensure it reaches you safely. However, in the rare case that your product arrives damaged, we offer a replacement. Please share clear photos of the damage within 48 hours of delivery. Recording an unboxing video also helps us verify and resolve the issue smoothly.</div>
     </div>
 
     <div class="faq-item">
@@ -96,10 +194,11 @@
 
     <div class="faq-item">
       <div class="question">Do you offer bulk discounts for gifting or events?</div>
-      <div class="answer">Yes, we do offer bulk orders for various occasions such as weddings, corporate events, return gifts, and more. We also provide customization options to make your candles truly special. Bulk orders come with different pricing, and we offer special discounts based on quantity. For more details or to place a bulk order, feel free to contact us at <strong>8421951707</strong>.</div>
+      <div class="answer">Yes, we offer bulk orders for weddings, corporate events, return gifts, and more. Discounts and customization available! Contact us at <strong>8421951707</strong>.</div>
     </div>
   </div>
 
+  <!-- FAQ Toggle Script -->
   <script>
     const questions = document.querySelectorAll(".question");
     questions.forEach((q) => {
@@ -110,24 +209,20 @@
     });
   </script>
 
+  <!-- Footer -->
   <footer class="site-footer">
-  <p class="footer-heading">Contact us on</p>
-
-  <div class="social-media">
-    <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
-      <i class="fab fa-instagram"></i> @creativetalesstore
-    </a>
-    <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
-      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-    </a>
-  </div>
-
-  <div>
+    <p class="footer-heading">Contact us on</p>
+    <div class="social-media">
+      <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i> @creativetalesstore
+      </a>
+      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services." target="_blank" class="social-link">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
     <a href="faq.html" class="faq-link">FAQ</a>
-  </div>
-
-  <p class="copyright">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
-</footer>
+    <p class="copyright">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>
