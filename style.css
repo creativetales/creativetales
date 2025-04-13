@@ -87,47 +87,47 @@ nav ul li a:hover {
 
 /* Products Section */
 .product-section {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
 
-  .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-  }
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
 
-  .product-card {
-    width: 280px;
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: left;
-  }
+.product-card {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: left;
+}
 
-  .product-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
 
-  .product-card h3 {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #333;
-  }
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
 
-  .product-card p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #555;
-  }
+.product-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
 
 /* About Section */
 .about {
@@ -278,37 +278,43 @@ nav ul li a:hover {
   }
 }
 
+/* -------- Updated Footer Section -------- */
 .site-footer {
   background-color: #6c63ff;
   color: white;
   text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
+  padding: 30px 20px;
   margin-top: 40px;
 }
 
-.footer-heading {
+.site-footer .footer-heading {
+  font-size: 18px;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-weight: 600;
 }
 
 .social-media {
-  margin-bottom: 10px;
+  margin: 15px 0;
 }
 
 .social-link {
   color: white;
-  margin: 0 10px;
+  margin: 0 15px;
+  font-size: 20px;
   text-decoration: none;
-  font-weight: 500;
+  display: inline-block;
 }
 
 .social-link:hover {
-  text-decoration: underline;
+  color: #ffd699;
+  transform: scale(1.1);
 }
 
 .faq-link {
-  color: white;
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  margin: 10px 0;
   text-decoration: underline;
 }
 
@@ -316,26 +322,63 @@ nav ul li a:hover {
   color: #e0e0e0;
 }
 
-copyright {
-  margin-top: 10px;
+.copyright {
+  font-size: 13px;
+  margin-top: 15px;
+  opacity: 0.8;
 }
 
+/* -------- Updated Slider Section -------- */
 .slider {
-  overflow: hidden;
   position: relative;
   width: 100%;
   height: 300px;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .slides {
   display: flex;
   width: 400%;
+  height: 100%;
   animation: slideAnimation 16s infinite;
 }
 
 .slides img {
-  width: 100vw; /* Full width of viewport */
+  width: 100vw;
   height: 100%;
   object-fit: cover;
   flex-shrink: 0;
+}
+
+@keyframes slideAnimation {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+/* Optional: Slider navigation dots */
+.slider-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.slider-dots span {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.slider-dots span.active {
+  background-color: #ff914d;
+  opacity: 1;
 }
