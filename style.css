@@ -384,21 +384,22 @@ nav ul li a:hover {
 }
 
 /* WhatsApp Chat Button */
+/* WhatsApp Floating Button */
 .whatsapp-chat {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 9999;
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   background-color: #25D366;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  z-index: 9999;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .whatsapp-chat:hover {
@@ -406,8 +407,8 @@ nav ul li a:hover {
 }
 
 .whatsapp-chat img {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* Makes it white icon */
+  filter: brightness(0) invert(1); /* Turns icon white */
 }
