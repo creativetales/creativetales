@@ -76,39 +76,25 @@
         </div>
     </section>
 
-    <footer>
-    <p style="margin-bottom: 10px; font-size: 16px;">Contact us on</p>
-    <div class="social-media" style="margin-bottom: 10px;">
-      <a href="https://instagram.com/creativetalesstore" target="_blank" style="color:white; margin: 0 10px;">
-        <i class="fab fa-instagram"></i> @creativetalesstore
-      </a>
-      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" style="color:white; margin: 0 10px;">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-      </a>
-    </div>
-    <div>
-      <a href="faq.html">FAQ</a>
-    </div>
-    <p style="margin-top: 10px;">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
-  </footer>
+<footer class="site-footer">
+  <p class="footer-heading">Contact us on</p>
 
-  <script>
-    document.getElementById("whatsappForm").addEventListener("submit", function (e) {
-      e.preventDefault();
+  <div class="social-media">
+    <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
+      <i class="fab fa-instagram"></i> @creativetalesstore
+    </a>
+    <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
+      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+  </div>
 
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const phone = document.getElementById("phone").value;
-      const message = document.getElementById("message").value;
+  <div>
+    <a href="faq.html" class="faq-link">FAQ</a>
+  </div>
 
-      const whatsappMsg = `Hello! I'm ${name}.\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
-      const encodedMsg = encodeURIComponent(whatsappMsg);
-      const whatsappNumber = "918421951707";
-      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;
+  <p class="copyright">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
+</footer>
 
-      window.open(whatsappURL, "_blank");
-    });
-  </script>
 
 </body>
 </html>
