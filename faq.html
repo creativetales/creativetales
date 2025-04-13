@@ -1,106 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQs</title>
+  <meta charset="UTF-8">
+  <title>Creative Tales Store - FAQs</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffaf5;
+      margin: 0;
       padding: 20px;
-      background-color: #f8f9fa;
     }
 
-    .faq-section {
+    .faq-container {
       max-width: 800px;
       margin: auto;
+      padding: 30px;
+      background-color: #fff7f0;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .faq-title {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 20px;
       text-align: center;
-      color: #333;
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #9b4c2b;
     }
 
     .faq-item {
-      background-color: #fff;
-      border: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      background-color: #ffe8d9;
+      padding: 15px;
       border-radius: 10px;
-      margin-bottom: 15px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-
-    .faq-question {
-      padding: 15px 20px;
-      font-size: 18px;
-      font-weight: 600;
       cursor: pointer;
-      position: relative;
-      color: #444;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
 
-    .faq-question::after {
-      content: '+';
-      position: absolute;
-      right: 20px;
-      font-size: 24px;
-      transition: transform 0.3s ease;
+    .question:hover {
+      background-color: #ffd5bb;
     }
 
-    .faq-item.active .faq-question::after {
-      content: '-';
-      transform: rotate(180deg);
-    }
-
-    .faq-answer {
+    .answer {
       display: none;
-      padding: 0 20px 15px;
-      font-size: 16px;
-      color: #666;
-    }
-
-    .faq-item.active .faq-answer {
-      display: block;
+      padding: 10px 15px;
+      border-left: 4px solid #ffa066;
+      margin-top: 5px;
+      background-color: #fff0e5;
+      border-radius: 0 0 10px 10px;
     }
   </style>
 </head>
 <body>
-  <div class="faq-section">
-    <div class="faq-title">Frequently Asked Questions</div>
+
+  <div class="faq-container">
+    <h1 class="faq-title">Frequently Asked Questions</h1>
 
     <div class="faq-item">
-      <div class="faq-question">What types of candles do you offer?</div>
-      <div class="faq-answer">We offer a wide range of scented candles including jar candles, decorative candles, and gift sets perfect for every occasion.</div>
+      <div class="question">Is your candle environmentally friendly?</div>
+      <div class="answer">Yes! We use natural soy wax, eco-friendly wicks, and recyclable packaging for all our products.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-question">Can I customize my candle order?</div>
-      <div class="faq-answer">Absolutely! We specialize in custom candle designs. You can choose your scent, color, and message. Just contact us with your request.</div>
+      <div class="question">How long will it take to deliver my order?</div>
+      <div class="answer">Delivery typically takes 5–7 business days depending on your location.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-question">How long will my candle burn?</div>
-      <div class="faq-answer">Burn time depends on the size and type of candle. Our average jar candle lasts 20–40 hours with proper care.</div>
+      <div class="question">What if my product arrived damaged?</div>
+      <div class="answer">If your candle arrives damaged, please contact us within 48 hours with photos, and we’ll arrange a replacement or refund.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-question">Do you offer bulk or corporate gifting?</div>
-      <div class="faq-answer">Yes, we offer bulk orders for weddings, festivals, and corporate gifting. Discounts are available on large orders.</div>
+      <div class="question">What payment methods can I choose from?</div>
+      <div class="answer">We accept UPI, Credit/Debit cards, Net Banking, and Cash on Delivery (COD) for selected locations.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Are your candles handmade?</div>
+      <div class="answer">Yes, all our candles are handmade with love and care using premium quality ingredients.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Do you take custom orders?</div>
+      <div class="answer">Absolutely! You can customize scent, shape, color, and packaging. Contact us on WhatsApp to place your custom order.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Is there a minimum order value?</div>
+      <div class="answer">No, there is no minimum order. You can even buy a single candle.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Do you offer bulk discounts for gifting or events?</div>
+      <div class="answer">Yes, we do! We offer special discounts for bulk orders — perfect for weddings, birthdays, or corporate gifting.</div>
     </div>
   </div>
 
   <script>
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-      item.querySelector('.faq-question').addEventListener('click', () => {
-        item.classList.toggle('active');
+    const questions = document.querySelectorAll(".question");
+    questions.forEach(q => {
+      q.addEventListener("click", () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
       });
     });
   </script>
+
 </body>
 </html>
