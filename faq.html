@@ -96,16 +96,16 @@
 
     <div class="faq-item">
       <div class="question">Do you offer bulk discounts for gifting or events?</div>
-      <div class="answer">Yes, we do offer bulk orders for various occasions such as weddings, corporate events, return gifts, and more. We also provide customization options to make your candles truly special. Bulk orders come with different pricing, and we offer special discounts based on quantity. For more details or to place a bulk order, feel free to contact us at 8421951707.</div>
+      <div class="answer">Yes, we do offer bulk orders for various occasions such as weddings, corporate events, return gifts, and more. We also provide customization options to make your candles truly special. Bulk orders come with different pricing, and we offer special discounts based on quantity. For more details or to place a bulk order, feel free to contact us at <strong>8421951707</strong>.</div>
     </div>
   </div>
 
   <script>
     const questions = document.querySelectorAll(".question");
-    questions.forEach(q => {
+    questions.forEach((q) => {
       q.addEventListener("click", () => {
         const answer = q.nextElementSibling;
-        answer.style.display = answer.style.display === "block" ? "none" : "block";
+        answer.style.display = (answer.style.display === "block") ? "none" : "block";
       });
     });
   </script>
