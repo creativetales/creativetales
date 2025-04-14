@@ -426,6 +426,20 @@ nav ul li a:hover {
 
 
 body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: radial-gradient(circle, #ffe7d4, #fff0e5);
+  animation: flicker 4s ease-in-out infinite;
   cursor: url('https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/tiny-candle-cursor.png'), auto;
 }
+
+@keyframes flicker {
+  0%, 100% {
+    background-color: #fff3e0;
+  }
+  50% {
+    background-color: #ffe0cc;
+  }
+}
+
 
