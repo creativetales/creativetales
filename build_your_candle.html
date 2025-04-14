@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Your Candle</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    nav { background-color: #333; padding: 1em; color: white; }
+    nav a { color: white; margin-right: 20px; text-decoration: none; }
+    .container { padding: 2em; max-width: 900px; margin: auto; }
+    .section { margin-bottom: 2em; }
+    .radio-group { display: flex; flex-wrap: wrap; gap: 1em; }
+    .preview-box { background-color: #f3f3f3; padding: 1em; border-radius: 8px; }
+    .candle-preview { width: 100px; height: 100px; border-radius: 50%; margin: 1em auto; border: 3px solid #ccc; }
+    .button { padding: 0.75em 1.5em; background-color: #25d366; color: white; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; }
+    input[type="text"] { padding: 0.5em; width: 100%; max-width: 400px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#build-candle">Build Your Candle</a>
+  </nav>
+
+  <div class="container" id="build-candle">
+    <h1>Build Your Candle</h1>
+
+    <div class="section">
+      <label><strong>Choose a Scent:</strong></label><br>
+      <div class="radio-group" id="scent-options">
+        <label><input type="radio" name="scent" value="Lavender" checked> Lavender</label>
+        <label><input type="radio" name="scent" value="Vanilla"> Vanilla</label>
+        <label><input type="radio" name="scent" value="Citrus"> Citrus</label>
+        <label><input type="radio" name="scent" value="Rose"> Rose</label>
+        <label><input type="radio" name="scent" value="Sandalwood"> Sandalwood</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <label><strong>Choose a Color:</strong></label><br>
+      <div class="radio-group" id="color-options">
+        <label><input type="radio" name="color" value="red" checked> Red</label>
+        <label><input type="radio" name="color" value="blue"> Blue</label>
+        <label><input type="radio" name="color" value="green"> Green</label>
+        <label><input type="radio" name="color" value="pink"> Pink</label>
+        <label><input type="radio" name="color" value="white"> White</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <label><strong>Personal Message on Candle:</strong></label><br>
+      <input type="text" id="message" placeholder="Write your message...">
+    </div>
+
+    <div class="section">
+      <label><strong>Choose Container Design:</strong></label><br>
+      <div class="radio-group" id="container-options">
+        <label><input type="radio" name="container" value="Glass Jar" checked> Glass Jar</label>
+        <label><input type="radio" name="container" value="Tin Can"> Tin Can</label>
+        <label><input type="radio" name="container" value="Ceramic Pot"> Ceramic Pot</label>
+      </div>
+    </div>
+
+    <div class="section preview-box">
+      <h3>Live Preview</h3>
+      <div id="preview-color" class="candle-preview"></div>
+      <p><strong>Scent:</strong> <span id="preview-scent">Lavender</span></p>
+      <p><strong>Color:</strong> <span id="preview-color-name">Red</span></p>
+      <p><strong>Container:</strong> <span id="preview-container">Glass Jar</span></p>
+      <p><strong>Message:</strong> <span id="preview-message">(No message)</span></p>
+    </div>
+
+    <div class="section">
+      <label><strong>Your Name:</strong></label><br>
+      <input type="text" id="customer-name" placeholder="Enter your name">
+      <br><br>
+      <label><strong>Your WhatsApp Number:</strong></label><br>
+      <input type="text" id="customer-whatsapp" placeholder="Enter your WhatsApp number">
+    </div>
+
+    <button class="button" onclick="sendToWhatsApp()">Send Customization to WhatsApp</button>
+  </div>
+
+  <script>
+    const scentRadios = document.getElementsByName('scent');
+    const colorRadios = document.getElementsByName('color');
+    const containerRadios = document.getElementsByName('container');
+
+    function updatePreview() {
+      const selectedScent = [...scentRadios].find(r => r.checked).value;
+      const selectedColor = [...colorRadios].find(r => r.checked).value;
+      const selectedContainer = [...containerRadios].find(r => r.checked).value;
+      const message = document.getElementById('message').value || '(No message)';
+
+      document.getElementById('preview-scent').textContent = selectedScent;
+      document.getElementById('preview-color-name').textContent = selectedColor;
+      document.getElementById('preview-container').textContent = selectedContainer;
+      document.getElementById('preview-message').textContent = message;
+
+      document.getElementById('preview-color').style.backgroundColor = selectedColor;
+    }
+
+    document.querySelectorAll('input').forEach(input => input.addEventListener('input', updatePreview));
+    updatePreview();
+
+    function sendToWhatsApp() {
+      const name = document.getElementById('customer-name').value.trim();
+      const number = document.getElementById('customer-whatsapp').value.trim();
+      const scent = [...scentRadios].find(r => r.checked).value;
+      const color = [...colorRadios].find(r => r.checked).value;
+      const container = [...containerRadios].find(r => r.checked).value;
+      const message = document.getElementById('message').value.trim() || '(No message)';
+
+      if (!name || !number) {
+        alert('Please fill in your name and WhatsApp number.');
+        return;
+      }
+
+      const text = `Hello! I customized a candle.\n\nName: ${name}\nWhatsApp: ${number}\nScent: ${scent}\nColor: ${color}\nContainer: ${container}\nMessage: ${message}`;
+      const encodedText = encodeURIComponent(text);
+      const whatsappURL = `https://wa.me/91XXXXXXXXXX?text=${encodedText}`; // Replace with your WhatsApp number
+
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+</body>
+</html>
