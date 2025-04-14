@@ -423,3 +423,9 @@ nav ul li a:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.6); /* orange glow */
 }
+
+
+body {
+  cursor: url('https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/tiny-candle-cursor.png'), auto;
+}
+
