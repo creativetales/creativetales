@@ -81,18 +81,24 @@
       background-color: #fff;
     }
 
-    input[type="text"] {
+    input[type="text"],
+    textarea {
       width: 100%;
-      max-width: 400px;
+      max-width: 600px;
       padding: 0.6em;
       border-radius: 4px;
       border: 1px solid #ccc;
     }
 
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
     .color-palette {
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
+      gap: 10px;
     }
 
     .color-swatch {
@@ -181,6 +187,8 @@
         <option value="Jasmine">Jasmine</option>
         <option value="Coffee Bean">Coffee Bean</option>
         <option value="Rose Blossom">Rose Blossom</option>
+        <option value="Ocean Breeze">Ocean Breeze</option>
+        <option value="Fresh Linen">Fresh Linen</option>
       </select>
     </div>
 
@@ -193,12 +201,16 @@
         <div class="color-swatch" data-name="Mint" style="background-color: #98ff98;"></div>
         <div class="color-swatch" data-name="Peach" style="background-color: #ffdab9;"></div>
         <div class="color-swatch" data-name="Lavender" style="background-color: #e6e6fa;"></div>
+        <div class="color-swatch" data-name="White" style="background-color: #ffffff; border: 1px solid #ccc;"></div>
+        <div class="color-swatch" data-name="Caramel" style="background-color: #d2b48c;"></div>
+        <div class="color-swatch" data-name="Sage Green" style="background-color: #b2c2b4;"></div>
+        <div class="color-swatch" data-name="Rust Orange" style="background-color: #d2691e;"></div>
       </div>
     </div>
 
     <div class="form-group">
       <label for="messageInput">Custom Message:</label>
-      <input type="text" id="messageInput" placeholder="Enter your message" />
+      <input type="text" id="messageInput" placeholder="Enter your custom message" />
     </div>
 
     <div class="form-group">
@@ -210,6 +222,11 @@
         <option value="Clay Pot">Clay Pot</option>
         <option value="Wooden Box">Wooden Box</option>
       </select>
+    </div>
+
+    <div class="form-group">
+      <label for="addressInput">Customer Address:</label>
+      <textarea id="addressInput" placeholder="Enter your full delivery address here"></textarea>
     </div>
 
     <button class="button" onclick="sendToWhatsApp()">Send Order via WhatsApp</button>
@@ -238,8 +255,9 @@
       let color = selectedColorName;
       let message = document.getElementById('messageInput').value;
       let container = document.getElementById('containerSelect').value;
+      let address = document.getElementById('addressInput').value;
 
-      if (!scent || !color || !container || !message) {
+      if (!scent || !color || !container || !message || !address) {
         alert("Please complete all fields before submitting.");
         return;
       }
@@ -248,30 +266,12 @@
                  `Scent: ${scent}%0A` +
                  `Color: ${color}%0A` +
                  `Message: ${message}%0A` +
-                 `Container: ${container}`;
+                 `Container: ${container}%0A` +
+                 `Address: ${address}`;
 
       const whatsappURL = `https://wa.me/918421951707?text=${encodeURIComponent(text)}`;
       window.open(whatsappURL, '_blank');
     }
-
-      <footer class="site-footer">
-  <p class="footer-heading">Contact us on</p>
-
-  <div class="social-media">
-    <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
-      <i class="fab fa-instagram"></i> @creativetalesstore
-    </a>
-    <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
-      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-    </a>
-  </div>
-
-  <div>
-    <a href="faq.html" class="faq-link">FAQ</a>
-  </div>
-
-  <p class="copyright">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
-</footer>
   </script>
 </body>
 </html>
