@@ -225,9 +225,9 @@
   max-width: 250px;
 }
 
-.highlight-item img {
-  width: 45px;
-  height: auto;
+.highlight-icon {
+  font-size: 40px;
+  color: #bb2649; /* Choose your brand color */
   margin-bottom: 10px;
 }
 
@@ -245,4 +245,5 @@
   font-size: 14px;
   color: #666;
 }
+
 
