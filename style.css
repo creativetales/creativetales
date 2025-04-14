@@ -207,43 +207,51 @@
 </body>
 </html>
 
-.service-highlights {
+.features-footer {
+  background-color: #f7f7f7;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 25px 0;
+}
+
+.features-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  background-color: #f9f9f9;
-  padding: 30px 10px;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
-  gap: 40px; /* space between items */
-  flex-wrap: nowrap; /* prevent wrapping */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  flex-wrap: nowrap;
 }
 
-.highlight-item {
-  text-align: center;
-  flex: 0 0 200px; /* fixed width for each box */
+.feature-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.highlight-icon {
-  font-size: 40px;
+.feature-box i {
+  font-size: 32px;
   color: #bb2649;
-  margin-bottom: 10px;
 }
 
-.highlight-item p {
-  margin: 5px 0;
+.feature-text {
+  text-align: left;
+}
+
+.feature-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
   color: #333;
 }
 
-.highlight-item p:first-of-type {
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.highlight-item p:last-of-type {
+.feature-sub {
+  margin: 0;
   font-size: 14px;
   color: #666;
 }
+
 
 
 
