@@ -433,52 +433,5 @@ body {
   cursor: url('https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/tiny-candle-cursor.png'), auto;
 }
 
-@keyframes flicker {
-  0%, 100% {
-    background-color: #fff3e0;
-  }
-  50% {
-    background-color: #ffe0cc;
-  }
-}
 
-.flicker-text {
-  animation: flickerText 2s infinite;
-  color: #ff6600;
-  text-shadow: 0 0 5px #ffa726, 0 0 10px #ffcc80;
-}
-
-@keyframes flickerText {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-  }
-  20%, 24%, 55% {
-    opacity: 0.5;
-  }
-}
-
-.flame {
-  width: 10px;
-  height: 30px;
-  background: radial-gradient(circle, #ff9900 0%, #ffcc00 60%, transparent 70%);
-  border-radius: 50% 50% 50% 50%;
-  animation: flameMove 1s infinite alternate;
-  margin: 20px auto;
-}
-
-@keyframes flameMove {
-  from {
-    transform: scaleY(1) translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: scaleY(1.2) translateY(-5px);
-    opacity: 0.8;
-  }
-}
-
-.site-header {
-  text-align: center;
-  margin-top: 20px;
-}
 
