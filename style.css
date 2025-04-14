@@ -206,3 +206,43 @@
   </script>
 </body>
 </html>
+
+.service-highlights {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  padding: 30px 10px;
+  flex-wrap: wrap;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.highlight-item {
+  text-align: center;
+  margin: 15px;
+  flex: 1 1 200px;
+  max-width: 250px;
+}
+
+.highlight-item img {
+  width: 45px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.highlight-item p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.highlight-item p:first-of-type {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.highlight-item p:last-of-type {
+  font-size: 14px;
+  color: #666;
+}
+
