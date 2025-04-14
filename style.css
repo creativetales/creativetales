@@ -457,3 +457,22 @@ body {
   }
 }
 
+.flame {
+  width: 10px;
+  height: 30px;
+  background: radial-gradient(circle, #ff9900 0%, #ffcc00 60%, transparent 70%);
+  border-radius: 50% 50% 50% 50%;
+  animation: flameMove 1s infinite alternate;
+  margin: 20px auto;
+}
+
+@keyframes flameMove {
+  from {
+    transform: scaleY(1) translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: scaleY(1.2) translateY(-5px);
+    opacity: 0.8;
+  }
+}
