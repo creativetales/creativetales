@@ -1,437 +1,208 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff3e6;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Navbar Styling */
-nav {
-  background-color: #fff8f2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
-}
-
-.logo-text {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ff6600;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-nav ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 8px 12px;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: #ffe4cc;
-  border-radius: 6px;
-  color: #ff6600;
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background-color: #eee;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #555;
-}
-
-/* Products Section */
-.product-section {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.product-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.product-card {
-  width: 280px;
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-.product-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.product-card h3 {
-  font-size: 18px;
-  margin: 10px 0;
-  color: #333;
-}
-
-.product-card p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #555;
-}
-
-/* About Section */
-.about {
-  padding: 60px 20px;
-  background-color: #f2f2f2;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #555;
-}
-
-/* Contact Us Section */
-.contact-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 20px;
-}
-
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: 0 auto;
-  gap: 40px;
-  text-align: left;
-}
-
-.contact-points {
-  flex: 1;
-  min-width: 280px;
-  font-size: 20px;
-  line-height: 1.8;
-}
-
-.contact-points ul {
-  list-style: none;
-  padding: 0;
-}
-
-.contact-points li::before {
-  content: '✔';
-  color: green;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.contact-form {
-  flex: 1;
-  min-width: 300px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  resize: none;
-}
-
-.contact-form textarea {
-  height: 120px;
-}
-
-.contact-form button {
-  width: 100%;
-  background-color: #ff914d;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #e76f3c;
-}
-
-.contact-info-boxes {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 60px;
-}
-
-.info-box {
-  background-color: #fffaf5;
-  border: 2px solid #ffcc99;
-  border-radius: 12px;
-  padding: 25px 20px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-}
-
-.info-box h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #ff7a1c;
-}
-
-.info-box p {
-  margin: 6px 0;
-  color: #555;
-  font-size: 16px;
-}
-
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info-box {
-    width: 90%;
-  }
-
-  .contact-form button {
-    font-size: 16px;
-  }
-}
-
-/* Footer Section */
-.site-footer {
-  background-color: #6c63ff;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 40px;
-}
-
-.site-footer .footer-heading {
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.social-media {
-  margin: 15px 0;
-}
-
-.social-link {
-  color: white;
-  margin: 0 15px;
-  font-size: 20px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.social-link:hover {
-  color: #ffd699;
-  transform: scale(1.1);
-}
-
-.faq-link {
-  color: #fff;
-  font-size: 14px;
-  display: block;
-  margin: 10px 0;
-  text-decoration: underline;
-}
-
-.faq-link:hover {
-  color: #e0e0e0;
-}
-
-.copyright {
-  font-size: 13px;
-  margin-top: 15px;
-  opacity: 0.8;
-}
-
-/* Slider Section */
-.slider {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
-
-.slides {
-  display: flex;
-  width: 400%;
-  height: 100%;
-  animation: slideAnimation 16s infinite;
-}
-
-.slides img {
-  width: 100vw;
-  height: 100%;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-@keyframes slideAnimation {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-100%); }
-  50% { transform: translateX(-200%); }
-  75% { transform: translateX(-300%); }
-  100% { transform: translateX(0); }
-}
-
-/* Slider Dots */
-.slider-dots {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.slider-dots span {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  opacity: 0.7;
-  transition: 0.3s;
-}
-
-.slider-dots span.active {
-  background-color: #ff914d;
-  opacity: 1;
-}
-
-/* WhatsApp Chat Button */
-/* WhatsApp Floating Button */
-.whatsapp-chat {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: #25D366;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.whatsapp-chat:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-chat img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  filter: brightness(0) invert(1); /* Turns icon white */
-}
-
-
-.category {
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.category:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6); /* orange glow */
-}
-
-
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: radial-gradient(circle, #ffe7d4, #fff0e5);
-  animation: flicker 4s ease-in-out infinite;
-  cursor: url('https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/tiny-candle-cursor.png'), auto;
-}
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Your Candle</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Merged CSS (from user) + custom preview styling */
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2em;
+    }
+
+    .section {
+      margin-bottom: 2em;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    .radio-group label {
+      background-color: #fffaf0;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+    }
+
+    .radio-group input[type="radio"] {
+      margin-right: 0.5em;
+    }
+
+    input[type="text"] {
+      padding: 0.5em;
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 0.5em;
+      box-sizing: border-box;
+    }
+
+    .preview-box {
+      background-color: #fffaf0;
+      padding: 1.5em;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .candle-preview {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 1em auto;
+      border: 3px solid #ccc;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .button {
+      padding: 0.75em 1.5em;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #1da851;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo-img" />
+      <div class="logo-text">Creative Tales</div>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="build_your_candle.html">Build Your Candle</a></li>
+    </ul>
+  </nav>
+
+  <!-- Customization Container -->
+  <div class="container">
+    <h1>Build Your Candle</h1>
+
+    <div class="section">
+      <h3>Choose a Scent:</h3>
+      <div class="radio-group" id="scentOptions">
+        <label><input type="radio" name="scent" value="Lavender" />Lavender</label>
+        <label><input type="radio" name="scent" value="Vanilla" />Vanilla</label>
+        <label><input type="radio" name="scent" value="Citrus" />Citrus</label>
+        <label><input type="radio" name="scent" value="Jasmine" />Jasmine</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Pick a Color:</h3>
+      <div class="radio-group" id="colorOptions">
+        <label><input type="radio" name="color" value="#ff9999" />Pink</label>
+        <label><input type="radio" name="color" value="#99ccff" />Blue</label>
+        <label><input type="radio" name="color" value="#ffff99" />Yellow</label>
+        <label><input type="radio" name="color" value="#ccffcc" />Mint</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Custom Message:</h3>
+      <input type="text" id="messageInput" placeholder="Enter your message here" />
+    </div>
+
+    <div class="section">
+      <h3>Choose Container Design:</h3>
+      <div class="radio-group" id="containerOptions">
+        <label><input type="radio" name="container" value="Glass Jar" />Glass Jar</label>
+        <label><input type="radio" name="container" value="Tin Can" />Tin Can</label>
+        <label><input type="radio" name="container" value="Clay Pot" />Clay Pot</label>
+        <label><input type="radio" name="container" value="Wooden Box" />Wooden Box</label>
+      </div>
+    </div>
+
+    <div class="section preview-box">
+      <h3>Live Preview</h3>
+      <div class="candle-preview" id="colorPreview"></div>
+      <p><strong>Scent:</strong> <span id="scentPreview">-</span></p>
+      <p><strong>Message:</strong> <span id="messagePreview">-</span></p>
+      <p><strong>Container:</strong> <span id="containerPreview">-</span></p>
+    </div>
+
+    <button class="button" onclick="sendToWhatsApp()">Send Custom Order to WhatsApp</button>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-chat" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp Chat">
+  </a>
+
+  <script>
+    const scentRadios = document.getElementsByName('scent');
+    const colorRadios = document.getElementsByName('color');
+    const containerRadios = document.getElementsByName('container');
+    const messageInput = document.getElementById('messageInput');
+
+    const scentPreview = document.getElementById('scentPreview');
+    const colorPreview = document.getElementById('colorPreview');
+    const messagePreview = document.getElementById('messagePreview');
+    const containerPreview = document.getElementById('containerPreview');
+
+    function updatePreview() {
+      for (const radio of scentRadios) {
+        if (radio.checked) scentPreview.textContent = radio.value;
+      }
+      for (const radio of colorRadios) {
+        if (radio.checked) colorPreview.style.backgroundColor = radio.value;
+      }
+      for (const radio of containerRadios) {
+        if (radio.checked) containerPreview.textContent = radio.value;
+      }
+      messagePreview.textContent = messageInput.value || '-';
+    }
+
+    scentRadios.forEach(r => r.addEventListener('change', updatePreview));
+    colorRadios.forEach(r => r.addEventListener('change', updatePreview));
+    containerRadios.forEach(r => r.addEventListener('change', updatePreview));
+    messageInput.addEventListener('input', updatePreview);
+
+    function sendToWhatsApp() {
+      let scent = document.querySelector('input[name="scent"]:checked')?.value;
+      let color = document.querySelector('input[name="color"]:checked')?.nextSibling.nodeValue.trim();
+      let message = messageInput.value;
+      let container = document.querySelector('input[name="container"]:checked')?.value;
+
+      if (!scent || !color || !container || !message) {
+        alert("Please complete all fields before sending your order.");
+        return;
+      }
+
+      let text = `New Candle Order!%0A%0A` +
+                 `Scent: ${scent}%0A` +
+                 `Color: ${color}%0A` +
+                 `Message: ${message}%0A` +
+                 `Container: ${container}`;
+
+      const encodedText = encodeURIComponent(text);
+      const whatsappURL = `https://wa.me/91XXXXXXXXXX?text=${encodedText}`; // Replace with your number
+
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+</body>
+</html>
