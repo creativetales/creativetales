@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Build Your Candle</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script> <!-- Replace with your Font Awesome Kit -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -155,6 +156,36 @@
     .note::before {
       content: "⭐ ";
     }
+
+    .footer {
+      background-color: #fffaf0;
+      padding: 2em;
+      text-align: center;
+      border-top: 1px solid #ddd;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 1em;
+    }
+
+    .social-link {
+      color: #333;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .social-link i {
+      margin-right: 5px;
+    }
+
+    .faq-link {
+      color: #333;
+      font-weight: 500;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -162,18 +193,19 @@
   <!-- Navbar -->
   <nav>
     <div class="logo-container">
-      <img src="logo.png" alt="Logo" class="logo-img" />
-      <div class="logo-text">Creative Tales</div>
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
+      <span class="logo-text">Creative Tales Store</span>
     </div>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
       <li><a href="build_your_candle.html">Build Your Candle</a></li>
     </ul>
   </nav>
 
+  <!-- Main Content -->
   <div class="container">
     <h1>Build Your Candle</h1>
 
@@ -235,9 +267,29 @@
   </div>
 
   <!-- WhatsApp Floating Button -->
-  <a class="whatsapp-chat" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+  <a class="whatsapp-chat" href="https://wa.me/918421951707" target="_blank">
     <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp Chat">
   </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-heading">Contact us on</p>
+
+    <div class="social-icons">
+      <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i> @creativetalesstore
+      </a>
+      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+
+    <div>
+      <a href="faq.html" class="faq-link">FAQ</a>
+    </div>
+
+    <p style="margin-top: 20px;">&copy; 2025 Creative Tales Store | All Rights Reserved</p>
+  </footer>
 
   <script>
     let selectedColorName = "";
