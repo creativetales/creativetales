@@ -209,25 +209,24 @@
 
 .service-highlights {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
   background-color: #f9f9f9;
   padding: 30px 10px;
-  flex-wrap: wrap;
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
+  gap: 40px; /* space between items */
+  flex-wrap: nowrap; /* prevent wrapping */
 }
 
 .highlight-item {
   text-align: center;
-  margin: 15px;
-  flex: 1 1 200px;
-  max-width: 250px;
+  flex: 0 0 200px; /* fixed width for each box */
 }
 
 .highlight-icon {
   font-size: 40px;
-  color: #bb2649; /* Choose your brand color */
+  color: #bb2649;
   margin-bottom: 10px;
 }
 
@@ -245,5 +244,6 @@
   font-size: 14px;
   color: #666;
 }
+
 
 
