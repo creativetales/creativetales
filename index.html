@@ -3,79 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy | Creative Tales Store</title>
+  <title>Creative Tales Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: radial-gradient(circle, #fff3e0, #ffe7d4);
       margin: 0;
-      padding: 2rem;
-      line-height: 1.6;
-      color: #5c4a3a;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: #ffffffd6;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 204, 153, 0.6);
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
-    h1, h2 {
-      color: #d96c1a;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    a {
-      color: #c05621;
-      text-decoration: underline;
+
+    .logo-img {
+      height: 50px;
+    }
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: url('https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257027/WhatsApp_Image_2024-03-18_at_11.47.33_1_-_Copy_jdjotn.jpg') no-repeat center/cover;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      background-color: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      background-color: rgba(0,0,0,0.4);
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 8px;
+    }
+
+    .featured-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .featured-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .product-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .product-card {
+      width: 260px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: left;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .product-card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fdd835;
+      text-decoration: none;
+    }
+
+    .social-media a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Privacy Policy</h1>
 
-    <p>This Privacy Policy describes how <strong>Creative Tales Store</strong> (“we”, “our”, or “us”) collects, uses, and protects any personal information you provide while using our website hosted on <strong>GitHub Pages</strong>.</p>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
+        <span class="logo-text">Creative Tales Store</span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <h2>1. Website Hosting</h2>
-    <p>Our website is a static website hosted via <a href="https://pages.github.com" target="_blank">GitHub Pages</a>. We do not collect payments, manage user accounts, or run a backend database.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Creative Tales Store</h1>
+    <p>Discover our handcrafted, aromatic candles made with love</p>
+  </section>
 
-    <h2>2. Information We Collect</h2>
-    <ul>
-      <li>Basic analytics data (e.g. page visits, browser type, IP address) via services like Google Analytics.</li>
-      <li>Information you voluntarily provide via email or WhatsApp (e.g. product inquiries).</li>
-    </ul>
+  <!-- Featured Products -->
+  <section class="featured-section">
+    <h2>Our Featured Candles</h2>
+    <div class="product-container">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257026/WhatsApp_Image_2024-03-18_at_11.47.33_2_phlugl.jpg" alt="Red Rose Candle">
+        <h3>Red Rose Tinbox Candle</h3>
+        <p><strong>Fragrance:</strong> Rose</p>
+        <p><strong>Price:</strong> ₹399</p>
+      </div>
 
-    <h2>3. Use of Information</h2>
-    <p>We use this information to:</p>
-    <ul>
-      <li>Understand how visitors interact with our website</li>
-      <li>Respond to inquiries and provide support</li>
-    </ul>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257027/WhatsApp_Image_2024-03-18_at_11.47.33_-_Copy_o9mvpx.jpg" alt="Vanilla Candle">
+        <h3>Vanilla Bliss Candle</h3>
+        <p><strong>Fragrance:</strong> Vanilla</p>
+        <p><strong>Price:</strong> ₹449</p>
+      </div>
 
-    <h2>4. Cookies & Analytics</h2>
-    <p>We may use cookies or tools like Google Analytics to better understand how our site is used. These tools may collect information such as your browser type, IP address, time zone, and site activity. You can control cookies through your browser settings.</p>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257027/WhatsApp_Image_2024-03-18_at_11.47.33_1_-_Copy_jdjotn.jpg" alt="Lavender Candle">
+        <h3>Lavender Calm Candle</h3>
+        <p><strong>Fragrance:</strong> Lavender</p>
+        <p><strong>Price:</strong> ₹499</p>
+      </div>
+    </div>
+  </section>
 
-    <h2>5. Third-Party Sharing</h2>
-    <p>We do not sell, trade, or rent your personal information. Any third-party tools we use (e.g., Google Analytics) are bound by their own privacy policies.</p>
+  <!-- Footer -->
+  <footer>
+    <p style="margin-bottom: 10px; font-size: 16px;">Contact us on</p>
+    <div class="social-media" style="margin-bottom: 10px;">
+      <a href="https://instagram.com/creativetalesstore" target="_blank">
+        <i class="fab fa-instagram"></i> @creativetalesstore
+      </a>
+      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+    <div>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <p style="margin-top: 10px;">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
+  </footer>
 
-    <h2>6. External Links</h2>
-    <p>Our website may contain links to external platforms (like Instagram, WhatsApp, or email). We are not responsible for the privacy practices of these sites.</p>
-
-    <h2>7. Children’s Privacy</h2>
-    <p>Our website is not intended for individuals under the age of 18. We do not knowingly collect any personal information from children.</p>
-
-    <h2>8. Your Rights</h2>
-    <p>You can request to access, update, or delete any personal information we may have about you by contacting us.</p>
-
-    <h2>9. Changes to this Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with the updated date.</p>
-
-    <h2>10. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy or how your data is used, please contact us:</p>
-    <ul>
-      <li>Email: <a href="mailto:tranquiltales0126@gmail.com">creativetalesstore@gmail.com</a></li>
-      <li>Instagram: <a href="https://www.instagram.com/creativetalesstore" target="_blank">@creativetalesstore</a></li>
-    </ul>
-  </div>
 </body>
 </html>
