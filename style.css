@@ -253,6 +253,23 @@
 }
 
 
+.categories .category-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.categories .category img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffcc99;
+  transition: transform 0.3s ease;
+}
+
+.categories .category img:hover {
+  transform: scale(1.05);
+  border-color: #ff6600;
+}
 
 
 
