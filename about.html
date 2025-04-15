@@ -4,118 +4,286 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Creative Tales Store</title>
-    <link rel="stylesheet" href="style.css"> <!-- Linking the CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdf9f3;
+            color: #2f2f2f;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #3e3e3e;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #fff7f0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d67d3e;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            color: #3e3e3e;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d67d3e;
+        }
+
+        .about {
+            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about ul {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            padding-left: 1.2rem;
+        }
+
+        .features-footer {
+            background-color: #fff7f0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .feature-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: #ffffff;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            max-width: 300px;
+        }
+
+        .feature-box i {
+            font-size: 24px;
+            color: #d67d3e;
+        }
+
+        .feature-title {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .feature-sub {
+            font-size: 0.9rem;
+            color: #6c6c6c;
+        }
+
+        .site-footer {
+            text-align: center;
+            background-color: #fff7f0;
+            padding: 2rem;
+        }
+
+        .footer-heading {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+
+        .social-link {
+            color: #3e3e3e;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #d67d3e;
+        }
+
+        .faq-link {
+            display: block;
+            margin-top: 1rem;
+            color: #3e3e3e;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .features-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <nav>
-         <div class="logo-container">
-    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
-    <span class="logo-text">Creative Tales Store</span>
-  </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="contact_us.html">Contact us</a></li> <!-- Fixed contact link -->
-                <li><a href="build_your_candle.html">Build Your Candle</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- About Section -->
-    <section class="about">
-        <h1>About Us</h1>
-        <p>
-            At <strong>Creative Tales Store</strong>, we believe that candles are more than just a source of light—they are a reflection of emotions, warmth, and memories. 
-            Every flicker of our handcrafted scented candles tells a story, bringing comfort, joy, and tranquility into your life.
-        </p>
-        
-        <p>
-            Born from a passion for creativity and a love for soothing aromas, our journey began with a simple yet powerful idea—to craft 
-            <strong>candles that spark emotions and make every moment special</strong>. Whether it's a quiet evening with a book, a romantic dinner, 
-            a festive celebration, or a thoughtful gift, our candles add the perfect touch of warmth and elegance.
-        </p>
-
-        <h2>Our Collection</h2>
+<!-- Header Section -->
+<header>
+    <nav>
+        <div class="logo-container">
+            <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
+            <span class="logo-text">Creative Tales Store</span>
+        </div>
         <ul>
-            <li>✨ <strong>Pillar Candles</strong> – Classic and timeless, perfect for décor.</li>
-            <li>✨ <strong>Glass Jar Candles</strong> – Elegant and long-lasting scents.</li>
-            <li>✨ <strong>T-Light Candles</strong> – Small but magical, creating a cozy ambiance.</li>
-            <li>✨ <strong>Luxury Scented Candles</strong> – Indulge in mesmerizing fragrances.</li>
-            <li>✨ <strong>Custom Candles & Hampers</strong> – Because every story is unique!</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="contact_us.html">Contact us</a></li>
+            <li><a href="build_your_candle.html">Build Your Candle</a></li>
         </ul>
+    </nav>
+</header>
 
-        <h2>Personalized Just for You</h2>
-        <p>
-            We understand that every occasion is special, and so should be the gift. That’s why we specialize in <strong>customized candles and hampers</strong>, 
-            crafted with love as per your preferences. Whether it's a birthday, anniversary, wedding, or corporate gifting, we design candles that match 
-            your emotions and celebrations.
-        </p>
+<!-- About Section -->
+<section class="about">
+    <h1>About Us</h1>
+    <p>
+        At <strong>Creative Tales Store</strong>, we believe that candles are more than just a source of light—they are a reflection of emotions, warmth, and memories.
+        Every flicker of our handcrafted scented candles tells a story, bringing comfort, joy, and tranquility into your life.
+    </p>
 
-        <p>
-            At <strong>Creative Tales Store</strong>, every candle is handmade with love, using the finest quality wax and essential oils. 
-            Our commitment is not just to illuminate spaces but to <strong>fill hearts with warmth and happiness</strong>.
-        </p>
+    <p>
+        Born from a passion for creativity and a love for soothing aromas, our journey began with a simple yet powerful idea—to craft
+        <strong>candles that spark emotions and make every moment special</strong>. Whether it's a quiet evening with a book, a romantic dinner,
+        a festive celebration, or a thoughtful gift, our candles add the perfect touch of warmth and elegance.
+    </p>
 
-        <h2>Our Mission</h2>
-        <p>
-            We aim to create eco-friendly, beautifully designed candles that bring joy, relaxation, and peace to your surroundings.
-        </p>
+    <h2>Our Collection</h2>
+    <ul>
+        <li>✨ <strong>Pillar Candles</strong> – Classic and timeless, perfect for décor.</li>
+        <li>✨ <strong>Glass Jar Candles</strong> – Elegant and long-lasting scents.</li>
+        <li>✨ <strong>T-Light Candles</strong> – Small but magical, creating a cozy ambiance.</li>
+        <li>✨ <strong>Luxury Scented Candles</strong> – Indulge in mesmerizing fragrances.</li>
+        <li>✨ <strong>Custom Candles & Hampers</strong> – Because every story is unique!</li>
+    </ul>
 
-        <p><strong>Thank you for being a part of our story. We can’t wait to be a part of yours!</strong></p>
+    <h2>Personalized Just for You</h2>
+    <p>
+        We understand that every occasion is special, and so should be the gift. That’s why we specialize in <strong>customized candles and hampers</strong>,
+        crafted with love as per your preferences. Whether it's a birthday, anniversary, wedding, or corporate gifting, we design candles that match
+        your emotions and celebrations.
+    </p>
 
-        <p>🕯 <em>Light up your world with Creative Tales Store!</em></p>
-    </section>
+    <p>
+        At <strong>Creative Tales Store</strong>, every candle is handmade with love, using the finest quality wax and essential oils.
+        Our commitment is not just to illuminate spaces but to <strong>fill hearts with warmth and happiness</strong>.
+    </p>
 
+    <h2>Our Mission</h2>
+    <p>
+        We aim to create eco-friendly, beautifully designed candles that bring joy, relaxation, and peace to your surroundings.
+    </p>
+
+    <p><strong>Thank you for being a part of our story. We can’t wait to be a part of yours!</strong></p>
+
+    <p>🕯 <em>Light up your world with Creative Tales Store!</em></p>
+</section>
+
+<!-- Features Section -->
+<footer class="features-footer">
+    <div class="features-container">
+        <div class="feature-box">
+            <i class="fas fa-box-open"></i>
+            <div class="feature-text">
+                <p class="feature-title">Free Shipping</p>
+                <p class="feature-sub">On all orders above Rs 499</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-truck-fast"></i>
+            <div class="feature-text">
+                <p class="feature-title">On Time Delivery</p>
+                <p class="feature-sub">Delivery before estimate date</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-lock"></i>
+            <div class="feature-text">
+                <p class="feature-title">100% Secured Payments</p>
+                <p class="feature-sub">We are officially registered</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Social Media and Contact Footer -->
 <footer class="site-footer">
-    <footer class="features-footer">
-  <div class="features-container">
-    <div class="feature-box">
-      <i class="fas fa-box-open"></i>
-      <div class="feature-text">
-        <p class="feature-title">Free Shipping</p>
-        <p class="feature-sub">On all orders above Rs 499</p>
-      </div>
+    <p class="footer-heading">Contact us on</p>
+    <div class="social-media">
+        <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i> @creativetalesstore
+        </a>
+        <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
     </div>
-    <div class="feature-box">
-      <i class="fas fa-truck-fast"></i>
-      <div class="feature-text">
-        <p class="feature-title">On Time Delivery</p>
-        <p class="feature-sub">Delivery before estimate date</p>
-      </div>
+    <div>
+        <a href="faq.html" class="faq-link">FAQ</a>
     </div>
-    <div class="feature-box">
-      <i class="fas fa-lock"></i>
-      <div class="feature-text">
-        <p class="feature-title">100% Secured Payments</p>
-        <p class="feature-sub">We are officially registered</p>
-      </div>
-    </div>
-  </div>
+    <p class="copyright">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
 </footer>
-
-  <p class="footer-heading">Contact us on</p>
-
-  <div class="social-media">
-    <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
-      <i class="fab fa-instagram"></i> @creativetalesstore
-    </a>
-    <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
-      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-    </a>
-  </div>
-
-  <div>
-    <a href="faq.html" class="faq-link">FAQ</a>
-  </div>
-
-  <p class="copyright">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
-</footer>
-
 
 </body>
 </html>
