@@ -2,147 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Tales Store</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
     }
 
+    /* Navbar */
     nav {
+      background-color: #fff8f2;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #fff;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 15px 40px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 10px;
     }
 
     .logo-img {
-      height: 50px;
+      width: 50px;
+      margin-right: 10px;
     }
 
     .logo-text {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
-      color: #333;
+      color: #ff6600;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
       gap: 20px;
-      margin: 0;
-      padding: 0;
+      list-style: none;
     }
 
     nav ul li a {
       text-decoration: none;
       color: #333;
-      font-weight: 600;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: all 0.3s;
     }
 
-    .hero {
-      padding: 60px 20px;
+    nav ul li a:hover {
+      background: #ffe4cc;
+      color: #ff6600;
+    }
+
+    /* Slider */
+    .slider {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+
+    .slides {
+      display: flex;
+      width: 400%;
+      animation: slideAnimation 16s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes slideAnimation {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(0); }
+      25% { transform: translateX(-100%); }
+      45% { transform: translateX(-100%); }
+      50% { transform: translateX(-200%); }
+      70% { transform: translateX(-200%); }
+      75% { transform: translateX(-300%); }
+      95% { transform: translateX(-300%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Sections */
+    section {
+      padding: 40px;
+    }
+
+    .intro h2, #home h1, .categories h2 {
+      color: #ff6600;
       text-align: center;
-      background: url('https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257027/WhatsApp_Image_2024-03-18_at_11.47.33_1_-_Copy_jdjotn.jpg') no-repeat center/cover;
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-      background-color: rgba(0,0,0,0.5);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 10px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      background-color: rgba(0,0,0,0.4);
-      display: inline-block;
-      padding: 5px 15px;
-      border-radius: 8px;
-    }
-
-    .featured-section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .featured-section h2 {
       margin-bottom: 20px;
     }
 
-    .product-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
+    .intro p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      text-align: center;
     }
 
-    .product-card {
-      width: 260px;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: left;
+    #home {
+      background-color: #fff0e6;
+      text-align: center;
     }
 
-    .product-card img {
+    #home p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .category-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .category {
+      text-align: center;
+    }
+
+    .category img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
-      margin-bottom: 15px;
     }
 
-    .product-card h3 {
-      margin: 0;
-      font-size: 18px;
+    .category p {
+      margin-top: 10px;
+      font-weight: 500;
       color: #333;
     }
 
-    .product-card p {
-      margin: 5px 0;
-      font-size: 14px;
-      color: #666;
-    }
-
-    footer {
-      background-color: #222;
+    /* Footer */
+    .footer {
+      background: #333;
       color: white;
-      padding: 30px 20px;
       text-align: center;
+      padding: 30px 20px;
     }
 
-    footer a {
-      color: #fdd835;
-      text-decoration: none;
+    .footer .social-icons {
+      margin: 10px 0;
     }
 
-    .social-media a {
-      color: white;
+    .footer .social-icons a {
       margin: 0 10px;
+      color: #fff;
       text-decoration: none;
+      font-size: 16px;
+    }
+
+    .footer .social-icons a:hover {
+      color: #ffcc99;
+    }
+
+    .footer a.faq-link {
+      color: #fff;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    .footer a.faq-link:hover {
+      color: #ffcc99;
+    }
+
+    .footer p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-chat {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      background-color: white;
+    }
+
+    .whatsapp-chat img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Navbar -->
   <header>
     <nav>
       <div class="logo-container">
@@ -152,63 +222,103 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to Creative Tales Store</h1>
-    <p>Discover our handcrafted, aromatic candles made with love</p>
+  <!-- Slider -->
+  <section class="slider">
+    <div class="slides">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/p2_-_Copy_r8uiuu.jpg" alt="Candle 1">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/wax_satches_vq5js5.jpg" alt="Candle 2">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/p4_-_Copy_dlwghj.jpg" alt="Candle 3">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257004/06_-_Copy_rgo0bj.jpg" alt="Candle 4">
+    </div>
   </section>
 
-  <!-- Featured Products -->
-  <section class="featured-section">
-    <h2>Our Featured Candles</h2>
-    <div class="product-container">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257026/WhatsApp_Image_2024-03-18_at_11.47.33_2_phlugl.jpg" alt="Red Rose Candle">
-        <h3>Red Rose Tinbox Candle</h3>
-        <p><strong>Fragrance:</strong> Rose</p>
-        <p><strong>Price:</strong> ₹399</p>
-      </div>
+  <!-- Intro -->
+  <section class="intro">
+    <h2>Welcome to Creative Tales Store – Where Every Candle Tells a Story</h2>
+    <p>
+      Indulge your senses and elevate your space with our handcrafted <strong>premium scented candles</strong> — designed to bring warmth, elegance, and luxury to any room.
+      At Creative Tales Store, we blend the finest waxes with authentic fragrance oils to create candles that burn clean, last longer, and fill your home with captivating aromas.
+      Thoughtfully made, affordably priced, and eco-friendly, our candles are more than just decor—they're a sensory experience. ✨
+    </p>
+  </section>
 
-      <!-- Product 2 -->
-      <div class="product-card">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257027/WhatsApp_Image_2024-03-18_at_11.47.33_-_Copy_o9mvpx.jpg" alt="Vanilla Candle">
-        <h3>Vanilla Bliss Candle</h3>
-        <p><strong>Fragrance:</strong> Vanilla</p>
-        <p><strong>Price:</strong> ₹449</p>
-      </div>
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to Creative Tales Store</h1>
+    <p>Handmade Scented Candles for Every Mood</p>
+  </section>
 
-      <!-- Product 3 -->
-      <div class="product-card">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257027/WhatsApp_Image_2024-03-18_at_11.47.33_1_-_Copy_jdjotn.jpg" alt="Lavender Candle">
-        <h3>Lavender Calm Candle</h3>
-        <p><strong>Fragrance:</strong> Lavender</p>
-        <p><strong>Price:</strong> ₹499</p>
+  <!-- Product Categories -->
+  <section id="products" class="categories">
+    <h2>Our Candle Collections</h2>
+    <div class="category-container">
+      <div class="category">
+        <a href="pillar.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257835/pillar_candle_vlztay.jpg" alt="Pillar Candles">
+          <p>Pillar Candles</p>
+        </a>
+      </div>
+      <div class="category">
+        <a href="glass.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257004/06_-_Copy_rgo0bj.jpg" alt="Glass Candles">
+          <p>Glass Candles</p>
+        </a>
+      </div>
+      <div class="category">
+        <a href="Tlight.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/p5_-_Copy_kjbr0m.jpg" alt="T-Light Candles">
+          <p>T-Light Candles</p>
+        </a>
+      </div>
+      <div class="category">
+        <a href="Tinbox.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257023/WhatsApp_Image_2024-03-18_at_11.47.32_1_bl2bdw.jpg" alt="Tinbox Candles">
+          <p>Tinbox Candles</p>
+        </a>
+      </div>
+      <div class="category">
+        <a href="mould.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257834/mouldcandles_hav9ez.jpg" alt="Mould Candles">
+          <p>Mould Candles</p>
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- WhatsApp Floating Button -->
+  <a
+    href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20am%20interested%20in%20your%20candles."
+    class="whatsapp-chat"
+    target="_blank"
+    aria-label="Chat with us on WhatsApp"
+  >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat"/>
+  </a>
+
   <!-- Footer -->
-  <footer>
-    <p style="margin-bottom: 10px; font-size: 16px;">Contact us on</p>
-    <div class="social-media" style="margin-bottom: 10px;">
-      <a href="https://instagram.com/creativetalesstore" target="_blank">
+  <footer class="footer">
+    <p class="footer-heading" style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Contact us on</p>
+
+    <div class="social-icons">
+      <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
         <i class="fab fa-instagram"></i> @creativetalesstore
       </a>
-      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank">
+      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
         <i class="fab fa-whatsapp"></i> Chat on WhatsApp
       </a>
     </div>
-    <div>
-      <a href="faq.html">FAQ</a>
+
+    <div style="margin-top: 10px;">
+      <a href="faq.html" class="faq-link">FAQ</a>
     </div>
-    <p style="margin-top: 10px;">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
+
+    <p style="margin-top: 20px;">&copy; 2025 Creative Tales Store | All Rights Reserved</p>
   </footer>
 
 </body>
