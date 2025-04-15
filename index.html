@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Tales Store</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-
   <style>
+    /* Reset + Fonts */
     * {
       margin: 0;
       padding: 0;
@@ -96,7 +96,7 @@
       padding: 40px;
     }
 
-    .intro h2, #home h1, .categories h2 {
+    .intro h2, #home h1, .categories h2, .product-carousel h2 {
       color: #ff6600;
       text-align: center;
       margin-bottom: 20px;
@@ -140,6 +140,45 @@
     }
 
     .category p {
+      margin-top: 10px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    /* Product Carousel */
+    .product-carousel {
+      padding: 40px;
+      background: #fff8f2;
+    }
+
+    .product-slider {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px 0;
+    }
+
+    .product-item {
+      min-width: 160px;
+      flex: 0 0 auto;
+      text-align: center;
+      scroll-snap-align: center;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-item p {
       margin-top: 10px;
       font-weight: 500;
       color: #333;
@@ -233,7 +272,6 @@
       margin-top: 10px;
       font-size: 14px;
     }
-
   </style>
 </head>
 <body>
@@ -280,7 +318,7 @@
     <p>Handmade Scented Candles for Every Mood</p>
   </section>
 
-  <!-- Products -->
+  <!-- Categories -->
   <section class="categories" id="products">
     <h2>Products We Deal In</h2>
     <div class="category-container">
@@ -300,6 +338,33 @@
         <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/p2_-_Copy_r8uiuu.jpg" alt="Decorative Sets">
         <p>Decorative Sets</p>
       </a>
+    </div>
+  </section>
+
+  <!-- Product Carousel -->
+  <section class="product-carousel">
+    <h2>Featured Items</h2>
+    <div class="product-slider">
+      <div class="product-item">
+        <img src="your-image-url-1.png" alt="Jar Scented Candles">
+        <p>Jar Scented Candles</p>
+      </div>
+      <div class="product-item">
+        <img src="your-image-url-2.png" alt="Perfume Roll Ons">
+        <p>Perfume Roll Ons</p>
+      </div>
+      <div class="product-item">
+        <img src="your-image-url-3.png" alt="Wax Melts">
+        <p>Wax Melts</p>
+      </div>
+      <div class="product-item">
+        <img src="your-image-url-4.png" alt="Cabinet Freshners">
+        <p>Cabinet Freshners</p>
+      </div>
+      <div class="product-item">
+        <img src="your-image-url-5.png" alt="Combos">
+        <p>Combos</p>
+      </div>
     </div>
   </section>
 
@@ -323,33 +388,8 @@
           <p class="feature-sub">On all orders above Rs 499</p>
         </div>
       </div>
-      <div class="feature-box">
-        <i class="fas fa-truck-fast"></i>
-        <div class="feature-text">
-          <p class="feature-title">On Time Delivery</p>
-          <p class="feature-sub">Delivery before estimate date</p>
-        </div>
-      </div>
-      <div class="feature-box">
-        <i class="fas fa-lock"></i>
-        <div class="feature-text">
-          <p class="feature-title">100% Secured Payments</p>
-          <p class="feature-sub">We are officially registered</p>
-        </div>
-      </div>
+      <!-- Add more feature-boxes as needed -->
     </div>
-
-    <p class="footer-heading" style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Contact us on</p>
-
-    <div class="social-icons">
-      <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
-        <i class="fab fa-instagram"></i> @creativetalesstore
-      </a>
-      <a href="https://wa.me/918421951707" target="_blank" class="social-link">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-      </a>
-    </div>
-
     <p>&copy; 2025 Creative Tales Store. All rights reserved.</p>
   </footer>
 
