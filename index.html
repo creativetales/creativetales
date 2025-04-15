@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Tales Store</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     * {
@@ -86,18 +85,13 @@
     }
 
     @keyframes slideAnimation {
-      0% { transform: translateX(0); }
-      20% { transform: translateX(0); }
-      25% { transform: translateX(-100%); }
-      45% { transform: translateX(-100%); }
-      50% { transform: translateX(-200%); }
-      70% { transform: translateX(-200%); }
-      75% { transform: translateX(-300%); }
-      95% { transform: translateX(-300%); }
+      0%, 20% { transform: translateX(0); }
+      25%, 45% { transform: translateX(-100%); }
+      50%, 70% { transform: translateX(-200%); }
+      75%, 95% { transform: translateX(-300%); }
       100% { transform: translateX(0); }
     }
 
-    /* Sections */
     section {
       padding: 40px;
     }
@@ -151,44 +145,6 @@
       color: #333;
     }
 
-    /* Footer */
-    .footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    .footer .social-icons {
-      margin: 10px 0;
-    }
-
-    .footer .social-icons a {
-      margin: 0 10px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    .footer .social-icons a:hover {
-      color: #ffcc99;
-    }
-
-    .footer a.faq-link {
-      color: #fff;
-      text-decoration: underline;
-      font-size: 14px;
-    }
-
-    .footer a.faq-link:hover {
-      color: #ffcc99;
-    }
-
-    .footer p {
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
     /* WhatsApp Button */
     .whatsapp-chat {
       position: fixed;
@@ -208,6 +164,76 @@
       border-radius: 50%;
       object-fit: contain;
     }
+
+    /* Footer */
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .feature-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 200px;
+    }
+
+    .feature-box i {
+      font-size: 30px;
+      color: #ffcc99;
+      margin-bottom: 10px;
+    }
+
+    .feature-text .feature-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .feature-sub {
+      font-size: 14px;
+    }
+
+    .social-icons {
+      margin: 10px 0;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .social-icons a:hover {
+      color: #ffcc99;
+    }
+
+    .footer a.faq-link {
+      color: #fff;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    .footer a.faq-link:hover {
+      color: #ffcc99;
+    }
+
+    .footer p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
   </style>
 </head>
 <body>
@@ -248,37 +274,36 @@
     </p>
   </section>
 
-  <!-- Home Section -->
+  <!-- Home -->
   <section id="home">
     <h1>Welcome to Creative Tales Store</h1>
     <p>Handmade Scented Candles for Every Mood</p>
   </section>
 
-<!-- Products We Deal In Section -->
-<section class="categories">
-  <h2>Products We Deal In</h2>
-  <div class="category-container">
-    <a href="wax_candles.html" class="category">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/candle1.jpg" alt="Wax Candles">
-      <p>Wax Candles</p>
-    </a>
-    <a href="wax_sachets.html" class="category">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/wax_satches_vq5js5.jpg" alt="Wax Sachets">
-      <p>Wax Sachets</p>
-    </a>
-    <a href="gift_boxes.html" class="category">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257004/06_-_Copy_rgo0bj.jpg" alt="Gift Boxes">
-      <p>Gift Boxes</p>
-    </a>
-    <a href="decorative_sets.html" class="category">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/p2_-_Copy_r8uiuu.jpg" alt="Decorative Sets">
-      <p>Decorative Sets</p>
-    </a>
-  </div>
-</section>
+  <!-- Products -->
+  <section class="categories" id="products">
+    <h2>Products We Deal In</h2>
+    <div class="category-container">
+      <a href="wax_candles.html" class="category">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/candle1.jpg" alt="Wax Candles">
+        <p>Wax Candles</p>
+      </a>
+      <a href="wax_sachets.html" class="category">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/wax_satches_vq5js5.jpg" alt="Wax Sachets">
+        <p>Wax Sachets</p>
+      </a>
+      <a href="gift_boxes.html" class="category">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257004/06_-_Copy_rgo0bj.jpg" alt="Gift Boxes">
+        <p>Gift Boxes</p>
+      </a>
+      <a href="decorative_sets.html" class="category">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257005/p2_-_Copy_r8uiuu.jpg" alt="Decorative Sets">
+        <p>Decorative Sets</p>
+      </a>
+    </div>
+  </section>
 
-
-  <!-- WhatsApp Floating Button -->
+  <!-- WhatsApp Button -->
   <a
     href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20am%20interested%20in%20your%20candles."
     class="whatsapp-chat"
@@ -290,7 +315,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-        <div class="features-container">
+    <div class="features-container">
       <div class="feature-box">
         <i class="fas fa-box-open"></i>
         <div class="feature-text">
@@ -313,23 +338,19 @@
         </div>
       </div>
     </div>
+
     <p class="footer-heading" style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Contact us on</p>
 
     <div class="social-icons">
       <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
         <i class="fab fa-instagram"></i> @creativetalesstore
       </a>
-      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
+      <a href="https://wa.me/918421951707" target="_blank" class="social-link">
         <i class="fab fa-whatsapp"></i> Chat on WhatsApp
       </a>
     </div>
 
-    <div style="margin-top: 10px;">
-      <a href="faq.html" class="faq-link">FAQ</a>
-      <a href="privacy_policy.html" class="privacy_policy-link">Privacy Policy</a>
-    </div>
-
-    <p style="margin-top: 20px;">&copy; 2025 Creative Tales Store | All Rights Reserved</p>
+    <p>&copy; 2025 Creative Tales Store. All rights reserved.</p>
   </footer>
 
 </body>
