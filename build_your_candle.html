@@ -4,15 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creative Tales Store</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a2e1e6da6e.js" crossorigin="anonymous"></script>
+
   <style>
-    body {
+    /* Global Styles */
+    * {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f7f2ec;
-      color: #2f2f2f;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fdf9f3;
+      color: #2f2f2f;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #3e3e3e;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header (Optional Placeholder) */
+    header {
+      padding: 20px;
+      background-color: #fff7f0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #d67d3e;
+    }
+
+    /* Benefits Section */
     .benefits-section {
       display: flex;
       flex-wrap: wrap;
@@ -23,7 +59,7 @@
     }
 
     .benefit-card {
-      background-color: #fff;
+      background-color: #ffffff;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       flex: 1 1 250px;
@@ -62,13 +98,26 @@
         align-items: center;
       }
     }
+
+    /* Footer (Optional Placeholder) */
+    footer {
+      padding: 20px;
+      background-color: #fff7f0;
+      text-align: center;
+      font-size: 14px;
+      color: #7a7a7a;
+    }
   </style>
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a2e1e6da6e.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- Updated Benefits Section -->
+  <!-- Header -->
+  <header>
+    <h1>Creative Tales Store</h1>
+    <p>Crafted Candles. Cozy Vibes. Delivered with Love.</p>
+  </header>
+
+  <!-- Benefits Section -->
   <section class="benefits-section">
     <div class="benefit-card">
       <i class="fas fa-shipping-fast"></i>
@@ -88,6 +137,11 @@
       <div class="benefit-desc">Pay confidently with encrypted & secure checkout options.</div>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Creative Tales Store. All rights reserved.
+  </footer>
 
 </body>
 </html>
