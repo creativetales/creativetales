@@ -1,289 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Creative Tales Store</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Creative Tales Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      text-align: center;
+      background-color: #fff8f0;
+      color: #333;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fdf9f3;
-            color: #2f2f2f;
-            line-height: 1.6;
-        }
+    header {
+      background-color: #ff914d;
+      padding: 1rem 0;
+    }
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: #3e3e3e;
-        }
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: #fff7f0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
+    .logo-img {
+      height: 50px;
+    }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
+    .logo-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+    }
 
-        .logo-img {
-            height: 50px;
-            margin-right: 10px;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin-top: 10px;
+    }
 
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #d67d3e;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        nav ul li a {
-            font-weight: 600;
-            color: #3e3e3e;
-            transition: color 0.3s ease;
-        }
+    .about {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
 
-        nav ul li a:hover {
-            color: #d67d3e;
-        }
+    .about h1, .about h2 {
+      color: #ff6f3c;
+    }
 
-        .about {
-            padding: 3rem 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
+    .about ul {
+      padding: 0;
+      list-style: none;
+    }
 
-        .about ul {
-            margin-top: 1rem;
-            margin-bottom: 2rem;
-            padding-left: 1.2rem;
-        }
+    .about li {
+      margin: 10px 0;
+    }
 
-        .features-footer {
-            background-color: #fff7f0;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    /* Footer Styles */
+    .site-footer {
+      background-color: #ffa366;
+      padding: 2rem 1rem;
+      color: white;
+    }
 
-        .features-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-        }
+    .features-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
 
-        .feature-box {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            background-color: #ffffff;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            max-width: 300px;
-        }
+    .feature-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 200px;
+    }
 
-        .feature-box i {
-            font-size: 24px;
-            color: #d67d3e;
-        }
+    .feature-box i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
 
-        .feature-title {
-            font-weight: bold;
-            font-size: 1rem;
-        }
+    .feature-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
 
-        .feature-sub {
-            font-size: 0.9rem;
-            color: #6c6c6c;
-        }
+    .feature-sub {
+      font-size: 0.9rem;
+    }
 
-        .site-footer {
-            text-align: center;
-            background-color: #fff7f0;
-            padding: 2rem;
-        }
+    .footer-heading {
+      font-size: 1.2rem;
+      margin: 1rem 0 0.5rem;
+    }
 
-        .footer-heading {
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 1rem;
-        }
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
 
-        .social-media {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 1rem 0;
-        }
+    .social-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        .social-link {
-            color: #3e3e3e;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
+    .social-link i {
+      margin-right: 5px;
+    }
 
-        .social-link:hover {
-            color: #d67d3e;
-        }
+    .faq-link {
+      color: white;
+      text-decoration: underline;
+    }
 
-        .faq-link {
-            display: block;
-            margin-top: 1rem;
-            color: #3e3e3e;
-        }
+    .copyright {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
 
-        .copyright {
-            font-size: 0.9rem;
-            color: #999;
-            margin-top: 1rem;
-        }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+      }
 
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            .features-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+      .features-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- Header Section -->
-<header>
+  <!-- Header Section -->
+  <header>
     <nav>
-        <div class="logo-container">
-            <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
-            <span class="logo-text">Creative Tales Store</span>
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="contact_us.html">Contact us</a></li>
-            <li><a href="build_your_candle.html">Build Your Candle</a></li>
-        </ul>
+      <div class="logo-container">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
+        <span class="logo-text">Creative Tales Store</span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+        <li><a href="build_your_candle.html">Build Your Candle</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<!-- About Section -->
-<section class="about">
+  <!-- About Section -->
+  <section class="about">
     <h1>About Us</h1>
     <p>
-        At <strong>Creative Tales Store</strong>, we believe that candles are more than just a source of light—they are a reflection of emotions, warmth, and memories.
-        Every flicker of our handcrafted scented candles tells a story, bringing comfort, joy, and tranquility into your life.
+      At <strong>Creative Tales Store</strong>, we believe that candles are more than just a source of light—they are a reflection of emotions, warmth, and memories. Every flicker of our handcrafted scented candles tells a story, bringing comfort, joy, and tranquility into your life.
     </p>
 
     <p>
-        Born from a passion for creativity and a love for soothing aromas, our journey began with a simple yet powerful idea—to craft
-        <strong>candles that spark emotions and make every moment special</strong>. Whether it's a quiet evening with a book, a romantic dinner,
-        a festive celebration, or a thoughtful gift, our candles add the perfect touch of warmth and elegance.
+      Born from a passion for creativity and a love for soothing aromas, our journey began with a simple yet powerful idea—to craft <strong>candles that spark emotions and make every moment special</strong>. Whether it's a quiet evening with a book, a romantic dinner, a festive celebration, or a thoughtful gift, our candles add the perfect touch of warmth and elegance.
     </p>
 
     <h2>Our Collection</h2>
     <ul>
-        <li>✨ <strong>Pillar Candles</strong> – Classic and timeless, perfect for décor.</li>
-        <li>✨ <strong>Glass Jar Candles</strong> – Elegant and long-lasting scents.</li>
-        <li>✨ <strong>T-Light Candles</strong> – Small but magical, creating a cozy ambiance.</li>
-        <li>✨ <strong>Luxury Scented Candles</strong> – Indulge in mesmerizing fragrances.</li>
-        <li>✨ <strong>Custom Candles & Hampers</strong> – Because every story is unique!</li>
+      <li>✨ <strong>Pillar Candles</strong> – Classic and timeless, perfect for décor.</li>
+      <li>✨ <strong>Glass Jar Candles</strong> – Elegant and long-lasting scents.</li>
+      <li>✨ <strong>T-Light Candles</strong> – Small but magical, creating a cozy ambiance.</li>
+      <li>✨ <strong>Luxury Scented Candles</strong> – Indulge in mesmerizing fragrances.</li>
+      <li>✨ <strong>Custom Candles & Hampers</strong> – Because every story is unique!</li>
     </ul>
 
     <h2>Personalized Just for You</h2>
     <p>
-        We understand that every occasion is special, and so should be the gift. That’s why we specialize in <strong>customized candles and hampers</strong>,
-        crafted with love as per your preferences. Whether it's a birthday, anniversary, wedding, or corporate gifting, we design candles that match
-        your emotions and celebrations.
+      We understand that every occasion is special, and so should be the gift. That’s why we specialize in <strong>customized candles and hampers</strong>, crafted with love as per your preferences. Whether it's a birthday, anniversary, wedding, or corporate gifting, we design candles that match your emotions and celebrations.
     </p>
 
     <p>
-        At <strong>Creative Tales Store</strong>, every candle is handmade with love, using the finest quality wax and essential oils.
-        Our commitment is not just to illuminate spaces but to <strong>fill hearts with warmth and happiness</strong>.
+      At <strong>Creative Tales Store</strong>, every candle is handmade with love, using the finest quality wax and essential oils. Our commitment is not just to illuminate spaces but to <strong>fill hearts with warmth and happiness</strong>.
     </p>
 
     <h2>Our Mission</h2>
     <p>
-        We aim to create eco-friendly, beautifully designed candles that bring joy, relaxation, and peace to your surroundings.
+      We aim to create eco-friendly, beautifully designed candles that bring joy, relaxation, and peace to your surroundings.
     </p>
 
     <p><strong>Thank you for being a part of our story. We can’t wait to be a part of yours!</strong></p>
 
     <p>🕯 <em>Light up your world with Creative Tales Store!</em></p>
-</section>
+  </section>
 
-<!-- Features Section -->
-<footer class="features-footer">
+  <!-- Footer Section -->
+  <footer class="site-footer">
     <div class="features-container">
-        <div class="feature-box">
-            <i class="fas fa-box-open"></i>
-            <div class="feature-text">
-                <p class="feature-title">Free Shipping</p>
-                <p class="feature-sub">On all orders above Rs 499</p>
-            </div>
+      <div class="feature-box">
+        <i class="fas fa-box-open"></i>
+        <div class="feature-text">
+          <p class="feature-title">Free Shipping</p>
+          <p class="feature-sub">On all orders above Rs 499</p>
         </div>
-        <div class="feature-box">
-            <i class="fas fa-truck-fast"></i>
-            <div class="feature-text">
-                <p class="feature-title">On Time Delivery</p>
-                <p class="feature-sub">Delivery before estimate date</p>
-            </div>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-truck-fast"></i>
+        <div class="feature-text">
+          <p class="feature-title">On Time Delivery</p>
+          <p class="feature-sub">Delivery before estimate date</p>
         </div>
-        <div class="feature-box">
-            <i class="fas fa-lock"></i>
-            <div class="feature-text">
-                <p class="feature-title">100% Secured Payments</p>
-                <p class="feature-sub">We are officially registered</p>
-            </div>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-lock"></i>
+        <div class="feature-text">
+          <p class="feature-title">100% Secured Payments</p>
+          <p class="feature-sub">We are officially registered</p>
         </div>
+      </div>
     </div>
-</footer>
 
-<!-- Social Media and Contact Footer -->
-<footer class="site-footer">
     <p class="footer-heading">Contact us on</p>
+
     <div class="social-media">
-        <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
-            <i class="fab fa-instagram"></i> @creativetalesstore
-        </a>
-        <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
-            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-        </a>
+      <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i> @creativetalesstore
+      </a>
+      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
     </div>
+
     <div>
-        <a href="faq.html" class="faq-link">FAQ</a>
+      <a href="faq.html" class="faq-link">FAQ</a>
     </div>
+
     <p class="copyright">&copy; 2024 Creative Tales Store | All Rights Reserved</p>
-</footer>
+  </footer>
 
 </body>
 </html>
