@@ -3,52 +3,227 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Creative Tales Store</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <title>Creative Tales Store - Build Your Candle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    /* Your CSS remains unchanged */
-    .product-gallery {
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffefb;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffefd5;
+      padding: 20px 0;
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      font-size: 28px;
+      color: #8b4513;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #fff0e1;
+      padding: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #8b4513;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fffaf0;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      color: #a0522d;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .color-palette {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
-    .product-gallery img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
+    .color-swatch {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .color-swatch.selected {
+      border: 2px solid #a0522d;
+      box-shadow: 0 0 5px #a0522d;
+    }
+
+    .button {
+      width: 100%;
+      padding: 12px;
+      background-color: #deb887;
+      color: white;
+      font-size: 18px;
+      border: none;
       border-radius: 8px;
-      border: 1px solid #ccc;
-      transition: transform 0.2s;
       cursor: pointer;
     }
 
-    .product-gallery img:hover {
-      transform: scale(1.05);
+    .button:hover {
+      background-color: #c5a06f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff0e1;
+      color: #8b4513;
+      margin-top: 40px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 60px;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe57;
+    }
+
+    @media screen and (max-width: 600px) {
+      .color-palette {
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Navbar remains unchanged -->
 
-  <!-- Main Content -->
-  <div class="container">
-    <h1>Build Your Candle</h1>
+<header>Creative Tales Store</header>
 
-    <!-- Form options unchanged -->
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Products</a>
+  <a href="#">Contact</a>
+</nav>
 
-    <div class="form-group">
-      <label>Product Images:</label>
-      <div class="product-gallery">
-        <img src="https://via.placeholder.com/100x100?text=Candle+1" alt="Candle Image 1">
-        <img src="https://via.placeholder.com/100x100?text=Candle+2" alt="Candle Image 2">
-        <img src="https://via.placeholder.com/100x100?text=Candle+3" alt="Candle Image 3">
-        <!-- Add more images as needed -->
-      </div>
-    </div>
+<div class="container">
+  <h2>Build Your Candle</h2>
 
-    <!-- Remaining content (footer, etc.) remains unchanged -->
+  <div class="form-group">
+    <label for="scentSelect">Choose a Scent:</label>
+    <select id="scentSelect">
+      <option value="">Select scent</option>
+      <option value="Lavender">Lavender</option>
+      <option value="Rose">Rose</option>
+      <option value="Vanilla">Vanilla</option>
+      <option value="Sandalwood">Sandalwood</option>
+      <option value="Jasmine">Jasmine</option>
+    </select>
   </div>
+
+  <div class="form-group">
+    <label>Pick a Color:</label>
+    <div class="color-palette">
+      <div class="color-swatch" data-name="Pink - Light" style="background-color: #ffc0cb;"></div>
+      <div class="color-swatch" data-name="Pink - Dark" style="background-color: #ff69b4;"></div>
+      <div class="color-swatch" data-name="Blue - Light" style="background-color: #add8e6;"></div>
+      <div class="color-swatch" data-name="Blue - Dark" style="background-color: #4682b4;"></div>
+      <div class="color-swatch" data-name="Yellow - Light" style="background-color: #fffacd;"></div>
+      <div class="color-swatch" data-name="Yellow - Dark" style="background-color: #ffd700;"></div>
+      <div class="color-swatch" data-name="Green - Light" style="background-color: #98fb98;"></div>
+      <div class="color-swatch" data-name="Green - Dark" style="background-color: #228b22;"></div>
+      <div class="color-swatch" data-name="Peach - Light" style="background-color: #ffe5b4;"></div>
+      <div class="color-swatch" data-name="Peach - Dark" style="background-color: #e6ac72;"></div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="customMessage">Add a Custom Message:</label>
+    <textarea id="customMessage" rows="3" placeholder="Write your message here..."></textarea>
+  </div>
+
+  <button class="button" onclick="sendWhatsApp()">Send via WhatsApp</button>
+</div>
+
+<a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">💬</a>
+
+<footer>
+  &copy; 2025 Creative Tales Store. All rights reserved.
+</footer>
+
+<script>
+  // Handle color swatch selection
+  const swatches = document.querySelectorAll('.color-swatch');
+  let selectedColor = '';
+
+  swatches.forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      swatches.forEach(s => s.classList.remove('selected'));
+      swatch.classList.add('selected');
+      selectedColor = swatch.dataset.name;
+    });
+  });
+
+  function sendWhatsApp() {
+    const scent = document.getElementById('scentSelect').value;
+    const message = document.getElementById('customMessage').value;
+
+    if (!scent || !selectedColor) {
+      alert("Please select both a scent and a color.");
+      return;
+    }
+
+    const fullMessage = `Hello! I'd like to build a custom candle:\n\n🌸 Scent: ${scent}\n🎨 Color: ${selectedColor}\n📝 Message: ${message}`;
+    const encodedMsg = encodeURIComponent(fullMessage);
+    const phone = "918421951707"; // 🔁 Replace with your business WhatsApp number
+    window.open(`https://wa.me/${phone}?text=${encodedMsg}`, '_blank');
+  }
+</script>
+
 </body>
 </html>
