@@ -2,36 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | Creative Tales Store</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Tales Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
-    body {
+    /* General Styles */
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      text-align: center;
-      background-color: #fff8f0;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* Header & Navbar */
-    header {
-      background-color: #ff8747;
-      padding: 1rem 0;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-nav {
+    /* Navbar Styles */
+    nav {
       background-color: #fff8f2;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 40px;
-      flex-wrap: wrap;
       position: sticky;
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
     }
 
     .logo-container {
@@ -50,13 +47,13 @@ nav {
       color: #ff6600;
     }
 
-    nav ul {
+    .nav-links {
       display: flex;
       gap: 20px;
       list-style: none;
     }
 
-    nav ul li a {
+    .nav-links li a {
       text-decoration: none;
       color: #333;
       font-weight: 500;
@@ -65,115 +62,59 @@ nav {
       transition: all 0.3s;
     }
 
-    nav ul li a:hover {
+    .nav-links li a:hover {
       background: #ffe4cc;
       color: #ff6600;
     }
 
-
-    /* About Section */
-    .about {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    /* Hamburger Icon */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
     }
 
-    .about h1, .about h2 {
-      color: #ff6f3c;
-    }
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff8f2;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
 
-    .about ul {
-      padding: 0;
-      list-style: none;
-    }
+      .nav-links.active {
+        display: flex;
+      }
 
-    .about li {
-      margin: 10px 0;
+      .hamburger {
+        display: block;
+      }
     }
-
-   
-/* Footer css */
-    .footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    .features-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 20px;
-    }
-
-    .feature-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 200px;
-    }
-
-    .feature-box i {
-      font-size: 30px;
-      color: #ffcc99;
-      margin-bottom: 10px;
-    }
-
-    .feature-text .feature-title {
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-
-    .feature-sub {
-      font-size: 14px;
-    }
-
-    .social-icons {
-      margin: 10px 0;
-    }
-
-    .social-icons a {
-      margin: 0 10px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    .social-icons a:hover {
-      color: #ffcc99;
-    }
-
-    .footer a.faq-link {
-      color: #fff;
-      text-decoration: underline;
-      font-size: 14px;
-    }
-
-    .footer a.faq-link:hover {
-      color: #ffcc99;
-    }
-
-    .footer p {
-      margin-top: 10px;
-      font-size: 14px;
-    }
-</style>
+  </style>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
- <!-- Navbar -->
+  <!-- Navbar HTML -->
   <header>
     <nav>
       <div class="logo-container">
         <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
         <span class="logo-text">Creative Tales Store</span>
       </div>
-      <ul>
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="#products">Products</a></li>
@@ -182,88 +123,13 @@ nav {
     </nav>
   </header>
 
-  <!-- About Section -->
-  <section class="about">
-    <h1>About Us</h1>
-    <p>
-      At <strong>Creative Tales Store</strong>, we believe that candles are more than just a source of light—they are a reflection of emotions, warmth, and memories. Every flicker of our handcrafted scented candles tells a story, bringing comfort, joy, and tranquility into your life.
-    </p>
-
-    <p>
-      Born from a passion for creativity and a love for soothing aromas, our journey began with a simple yet powerful idea—to craft <strong>candles that spark emotions and make every moment special</strong>. Whether it's a quiet evening with a book, a romantic dinner, a festive celebration, or a thoughtful gift, our candles add the perfect touch of warmth and elegance.
-    </p>
-
-    <h2>Our Collection</h2>
-    <ul>
-      <li>✨ <strong>Pillar Candles</strong> – Classic and timeless, perfect for décor.</li>
-      <li>✨ <strong>Glass Jar Candles</strong> – Elegant and long-lasting scents.</li>
-      <li>✨ <strong>T-Light Candles</strong> – Small but magical, creating a cozy ambiance.</li>
-      <li>✨ <strong>Luxury Scented Candles</strong> – Indulge in mesmerizing fragrances.</li>
-      <li>✨ <strong>Custom Candles & Hampers</strong> – Because every story is unique!</li>
-    </ul>
-
-    <h2>Personalized Just for You</h2>
-    <p>
-      We understand that every occasion is special, and so should be the gift. That’s why we specialize in <strong>customized candles and hampers</strong>, crafted with love as per your preferences. Whether it's a birthday, anniversary, wedding, or corporate gifting, we design candles that match your emotions and celebrations.
-    </p>
-
-    <p>
-      At <strong>Creative Tales Store</strong>, every candle is handmade with love, using the finest quality wax and essential oils. Our commitment is not just to illuminate spaces but to <strong>fill hearts with warmth and happiness</strong>.
-    </p>
-
-    <h2>Our Mission</h2>
-    <p>
-      We aim to create eco-friendly, beautifully designed candles that bring joy, relaxation, and peace to your surroundings.
-    </p>
-
-    <p><strong>Thank you for being a part of our story. We can’t wait to be a part of yours!</strong></p>
-
-    <p>🕯 <em>Light up your world with Creative Tales Store!</em></p>
-  </section>
-
-  <!-- Footer Section -->
-  <footer class="site-footer">
-    <div class="features-container">
-      <div class="feature-box">
-        <i class="fas fa-box-open"></i>
-        <div class="feature-text">
-          <p class="feature-title">Free Shipping</p>
-          <p class="feature-sub">On all orders above Rs 499</p>
-        </div>
-      </div>
-      <div class="feature-box">
-        <i class="fas fa-truck-fast"></i>
-        <div class="feature-text">
-          <p class="feature-title">On Time Delivery</p>
-          <p class="feature-sub">Delivery before estimate date</p>
-        </div>
-      </div>
-      <div class="feature-box">
-        <i class="fas fa-lock"></i>
-        <div class="feature-text">
-          <p class="feature-title">100% Secured Payments</p>
-          <p class="feature-sub">We are officially registered</p>
-        </div>
-      </div>
-    </div>
-
-    <p class="footer-heading">Contact us on</p>
-
-    <div class="social-media">
-      <a href="https://instagram.com/creativetalesstore" target="_blank" class="social-link">
-        <i class="fab fa-instagram"></i> @creativetalesstore
-      </a>
-      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank" class="social-link">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-      </a>
-    </div>
-
-    <div>
-      <a href="faq.html" class="faq-link">FAQ</a>
-    </div>
-
-    <p class="copyright">&copy; 2025 Creative Tales Store | All Rights Reserved</p>
-  </footer>
+  <script>
+    // Toggle Menu for Mobile
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
 
 </body>
 </html>
