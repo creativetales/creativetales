@@ -94,6 +94,52 @@
       }
     }
 
+    /*products*/
+    .products {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.products h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  width: 160px;
+  text-align: center;
+}
+
+.product-item img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #fcece5;
+  padding: 20px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.product-item img:hover {
+  transform: scale(1.05);
+}
+
+.product-item p {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+
     /* FOOTER */
     .footer {
       background-color: #f9f9f9;
@@ -258,6 +304,33 @@
       </ul>
     </nav>
   </header>
+
+  <section class="products">
+  <h2>Products We Deal In</h2>
+  <div class="product-list">
+    <div class="product-item">
+      <img src="images/diffuser-oil.png" alt="Diffuser Oils" />
+      <p>Diffuser Oils</p>
+    </div>
+    <div class="product-item">
+      <img src="images/fragrance-bar.png" alt="Fragrance Bars" />
+      <p>Fragrance Bars</p>
+    </div>
+    <div class="product-item">
+      <img src="images/ittar.png" alt="Ittar" />
+      <p>Ittar</p>
+    </div>
+    <div class="product-item">
+      <img src="images/ittar-premium.png" alt="Ittar Premium" />
+      <p>Ittar Premium</p>
+    </div>
+    <div class="product-item">
+      <img src="images/jar-candle.png" alt="Jar Scented Candles" />
+      <p>Jar Scented Candles</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="footer">
