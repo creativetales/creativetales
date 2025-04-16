@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Creative Tales Store</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   <style>
-    /* General Styles */
     * {
       margin: 0;
       padding: 0;
@@ -17,7 +16,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* Navbar Styles */
+    /* NAVBAR STYLES */
     nav {
       background-color: #fff8f2;
       display: flex;
@@ -67,14 +66,12 @@
       color: #ff6600;
     }
 
-    /* Hamburger Icon */
     .hamburger {
       display: none;
       font-size: 24px;
       cursor: pointer;
     }
 
-    /* Responsive Styling */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -96,24 +93,96 @@
         display: block;
       }
     }
+
+    /* FOOTER STYLES */
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .feature-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 200px;
+    }
+
+    .feature-box i {
+      font-size: 30px;
+      color: #ffcc99;
+      margin-bottom: 10px;
+    }
+
+    .feature-text .feature-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .feature-sub {
+      font-size: 14px;
+    }
+
+    .social-media {
+      margin: 10px 0;
+    }
+
+    .social-media a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .social-media a:hover {
+      color: #ffcc99;
+    }
+
+    .footer a.faq-link {
+      color: #fff;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    .footer a.faq-link:hover {
+      color: #ffcc99;
+    }
+
+    .footer p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .footer-heading {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Navbar HTML -->
+  <!-- Navbar -->
   <header>
     <nav>
       <div class="logo-container">
         <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
         <span class="logo-text">Creative Tales Store</span>
       </div>
-
-      <!-- Hamburger Icon -->
       <div class="hamburger" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
       </div>
-
-      <!-- Navigation Links -->
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -123,8 +192,57 @@
     </nav>
   </header>
 
+  <!-- Page Content -->
+  <main style="padding: 20px; text-align: center;">
+    <h1>About Creative Tales Store</h1>
+    <p>We are passionate about handmade scented candles and unique gift items. Each product is made with love and care to bring joy to your space.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="features-container">
+      <div class="feature-box">
+        <i class="fas fa-box-open"></i>
+        <div class="feature-text">
+          <p class="feature-title">Free Shipping</p>
+          <p class="feature-sub">On all orders above Rs 499</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-truck-fast"></i>
+        <div class="feature-text">
+          <p class="feature-title">On Time Delivery</p>
+          <p class="feature-sub">Delivery before estimate date</p>
+        </div>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-lock"></i>
+        <div class="feature-text">
+          <p class="feature-title">100% Secured Payments</p>
+          <p class="feature-sub">We are officially registered</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-heading">Contact us on</p>
+
+    <div class="social-media">
+      <a href="https://instagram.com/creativetalesstore" target="_blank">
+        <i class="fab fa-instagram"></i> @creativetalesstore
+      </a>
+      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+
+    <div>
+      <a href="faq.html" class="faq-link">FAQ</a>
+    </div>
+
+    <p class="copyright">&copy; 2025 Creative Tales Store | All Rights Reserved</p>
+  </footer>
+
   <script>
-    // Toggle Menu for Mobile
     function toggleMenu() {
       const navLinks = document.getElementById("navLinks");
       navLinks.classList.toggle("active");
