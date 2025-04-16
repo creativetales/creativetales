@@ -16,7 +16,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* NAVBAR STYLES */
+    /* NAVBAR */
     nav {
       background-color: #fff8f2;
       display: flex;
@@ -94,12 +94,12 @@
       }
     }
 
-    /* FOOTER STYLES */
+    /* FOOTER */
     .footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
+      background-color: #f9f9f9;
+      color: #222;
+      padding: 40px 20px;
+      font-family: 'Poppins', sans-serif;
     }
 
     .features-container {
@@ -107,7 +107,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .feature-box {
@@ -115,15 +115,16 @@
       flex-direction: column;
       align-items: center;
       max-width: 200px;
+      text-align: center;
     }
 
     .feature-box i {
       font-size: 30px;
-      color: #ffcc99;
+      color: #ff6600;
       margin-bottom: 10px;
     }
 
-    .feature-text .feature-title {
+    .feature-title {
       font-weight: bold;
       font-size: 16px;
       margin-bottom: 5px;
@@ -133,49 +134,87 @@
       font-size: 14px;
     }
 
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .footer-section {
+      flex: 1 1 220px;
+      margin: 20px;
+    }
+
+    .footer-section h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: #888;
+    }
+
+    .brand .logo {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      font-size: 20px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #666;
+    }
+
     .social-media {
-      margin: 10px 0;
+      text-align: center;
+      margin: 20px 0;
     }
 
     .social-media a {
       display: inline-block;
       margin: 5px 10px;
-      color: #fff;
+      color: #222;
       text-decoration: none;
       font-size: 16px;
     }
 
     .social-media a:hover {
-      color: #ffcc99;
+      color: #ff6600;
     }
 
-    .footer-links {
-      margin-top: 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .footer-links a {
-      color: #fff;
-      text-decoration: underline;
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
       font-size: 14px;
-    }
-
-    .footer-links a:hover {
-      color: #ffcc99;
-    }
-
-    .footer p {
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    .footer-heading {
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 10px;
+      color: #777;
     }
   </style>
 </head>
@@ -199,9 +238,6 @@
       </ul>
     </nav>
   </header>
-
-  <!-- Page Content -->
-
 
   <!-- Footer -->
   <footer class="footer">
@@ -229,7 +265,43 @@
       </div>
     </div>
 
-    <p class="footer-heading">Contact us on</p>
+    <div class="footer-container">
+      <!-- Logo and About -->
+      <div class="footer-section brand">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Store Logo" class="logo">
+        <p class="description">Welcome to Creative Tales Store, your ultimate destination for creating serene and fragrant environments.</p>
+        <div class="social-icons">
+          <a href="https://instagram.com/creativetalesstore" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Returns & Exchange Policy</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Product Categories -->
+      <div class="footer-section">
+        <h3>Product Categories</h3>
+        <ul>
+          <li><a href="#">Combos</a></li>
+          <li><a href="#">Designer Scented Candles</a></li>
+          <li><a href="#">Fragrance Bars</a></li>
+          <li><a href="#">Diffusers</a></li>
+          <li><a href="#">Wax Melts</a></li>
+        </ul>
+      </div>
+    </div>
 
     <div class="social-media">
       <a href="https://instagram.com/creativetalesstore" target="_blank">
@@ -238,14 +310,6 @@
       <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank">
         <i class="fab fa-whatsapp"></i> Chat on WhatsApp
       </a>
-    </div>
-
-    <div class="footer-links">
-      <a href="faq.html" class="faq-link">FAQ</a>
-      <a href="terms.html" class="terms-link">Terms & Conditions</a>
-      <a href="privacy_policy.html" class="privacy_policy-link">Privacy Policy</a>
-      <a href="refunds.html" class="refunds-link">Refund Policy</a>
-      <a href="returns.html" class="returns-link">Return & Exchange Policy</a>
     </div>
 
     <p class="copyright">&copy; 2025 Creative Tales Store | All Rights Reserved</p>
