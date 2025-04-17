@@ -300,6 +300,48 @@
       object-fit: contain;
     }
 
+
+
+/*features*/
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .feature-item {
+      width: 120px;
+    }
+
+    .feature-item img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+
+
+
+    
+    
   </style>
 </head>
 <body>
@@ -389,6 +431,52 @@
   </div>
 </section>
 
+
+
+
+
+
+
+
+
+
+
+
+  <div class="features">
+    <div class="feature-item">
+      <img src="non-toxic.png" alt="Non Toxic">
+      <p>NON TOXIC</p>
+    </div>
+    <div class="feature-item">
+      <img src="organic.png" alt="Organic Aroma">
+      <p>ORGANIC AROMA</p>
+    </div>
+    <div class="feature-item">
+      <img src="cotton-wick.png" alt="Cotton Wick">
+      <p>COTTON WICK</p>
+    </div>
+    <div class="feature-item">
+      <img src="non-smoky.png" alt="Non Smoky">
+      <p>NON SMOKY</p>
+    </div>
+    <div class="feature-item">
+      <img src="natural-scent.png" alt="Natural Scent">
+      <p>NATURAL SCENT</p>
+    </div>
+    <div class="feature-item">
+      <img src="reusable-jar.png" alt="Reusable Jar">
+      <p>REUSABLE JAR</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  
 
   <!-- Footer -->
   <footer class="footer">
