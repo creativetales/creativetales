@@ -304,46 +304,58 @@
 
 /*features*/
 
-  .features {
+    .features {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    font-family: Arial, sans-serif;
   }
 
   .feature-item {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 140px;
     text-align: center;
+    cursor: pointer;
   }
 
   .feature-item img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: opacity 0.3s ease;
+    height: auto;
+    border-radius: 8px;
   }
 
-  .feature-item p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 5px 0;
-    background: rgba(0, 128, 0, 0.7); /* green background with transparency */
-    color: white;
+  .feature-name {
+    margin-top: 8px;
     font-weight: bold;
-    font-size: 14px;
+    color: #333;
+  }
+
+  .feature-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 100%;
+    background: rgba(0, 128, 0, 0.85);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
     opacity: 0;
     transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
   }
 
-  .feature-item:hover p {
+  .feature-item:hover .feature-description,
+  .feature-name:hover + .feature-description {
     opacity: 1;
+    pointer-events: auto;
   }
-
 
 
 
@@ -450,27 +462,36 @@
 
 
   <div class="features">
-    <div class="feature-item">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897223/677174db-a27f-4939-b4fb-3dc866f87d0a_ech0jf.png" alt="Non Toxic">
-      <p>NON TOXIC hgvtgiukn hvytg98in hbuiollm, </p>
-    </div>
-    <div class="feature-item">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897506/ChatGPT_Image_Apr_17_2025_07_14_25_PM_hhp9ch.png" alt="Organic Aroma">
-      <p>ORGANIC AROMA</p>
-    </div>
-    <div class="feature-item">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744885806/0a6b9db4-6c9f-4972-b0c7-acbe15592b82_a8kpui.png" alt="Cotton Wick">
-      <p>COTTON WICK</p>
-    </div>
-    <div class="feature-item">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897232/f4081c19-d9d8-45cf-bb44-8e0e9f826420_aptkjb.png" alt="Natural Scent">
-      <p>NATURAL SCENT</p>
-    </div>
-    <div class="feature-item">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744885805/ChatGPT_Image_Apr_17_2025_03_49_35_PM_ewscb9.png" alt="Reusable Jar">
-      <p>REUSABLE JAR</p>
-    </div>
+  <div class="feature-item">
+    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897223/677174db-a27f-4939-b4fb-3dc866f87d0a_ech0jf.png" alt="Non Toxic">
+    <div class="feature-name">NON TOXIC</div>
+    <div class="feature-description">Free from harmful chemicals. Safe for everyday use.</div>
   </div>
+
+  <div class="feature-item">
+    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897506/ChatGPT_Image_Apr_17_2025_07_14_25_PM_hhp9ch.png" alt="Organic Aroma">
+    <div class="feature-name">ORGANIC AROMA</div>
+    <div class="feature-description">Made with naturally derived essential oils for a soothing scent.</div>
+  </div>
+
+  <div class="feature-item">
+    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744885806/0a6b9db4-6c9f-4972-b0c7-acbe15592b82_a8kpui.png" alt="Cotton Wick">
+    <div class="feature-name">COTTON WICK</div>
+    <div class="feature-description">Clean-burning cotton wicks. No black smoke residue.</div>
+  </div>
+
+  <div class="feature-item">
+    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897232/f4081c19-d9d8-45cf-bb44-8e0e9f826420_aptkjb.png" alt="Natural Scent">
+    <div class="feature-name">NATURAL SCENT</div>
+    <div class="feature-description">Fragrance from natural plant extracts. Fresh and calming.</div>
+  </div>
+
+  <div class="feature-item">
+    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744885805/ChatGPT_Image_Apr_17_2025_03_49_35_PM_ewscb9.png" alt="Reusable Jar">
+    <div class="feature-name">REUSABLE JAR</div>
+    <div class="feature-description">Eco-friendly glass jar. Wash and reuse for storage or decor.</div>
+  </div>
+</div>
 
 
 
