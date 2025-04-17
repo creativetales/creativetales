@@ -346,6 +346,10 @@
 <div class="container">
   <h2>Build Your Candle</h2>
 
+ <div class="container">
+  <h2>Build Your Candle</h2>
+
+  <!-- Scent -->
   <div class="form-group">
     <label for="scentSelect">Choose a Scent:</label>
     <select id="scentSelect">
@@ -358,29 +362,63 @@
     </select>
   </div>
 
+  <!-- Container -->
+  <div class="form-group">
+    <label for="containerSelect">Choose a Container:</label>
+    <select id="containerSelect">
+      <option value="">Select container</option>
+      <option value="Glass Jar - Round">Glass Jar - Round</option>
+      <option value="Glass Jar - Square">Glass Jar - Square</option>
+      <option value="Tin Container">Tin Container</option>
+      <option value="Mason Jar">Mason Jar</option>
+    </select>
+  </div>
+
+  <!-- Size -->
+  <div class="form-group">
+    <label for="sizeSelect">Candle Size:</label>
+    <select id="sizeSelect">
+      <option value="">Select size</option>
+      <option value="Small">Small (100g)</option>
+      <option value="Medium">Medium (200g)</option>
+      <option value="Large">Large (300g)</option>
+    </select>
+  </div>
+
+  <!-- Wax Type -->
+  <div class="form-group">
+    <label for="waxSelect">Wax Type:</label>
+    <select id="waxSelect">
+      <option value="">Select wax</option>
+      <option value="Soy Wax">Soy Wax</option>
+      <option value="Beeswax">Beeswax</option>
+      <option value="Paraffin">Paraffin</option>
+    </select>
+  </div>
+
+  <!-- Color Picker -->
   <div class="form-group">
     <label>Pick a Color:</label>
     <div class="color-palette">
+      <!-- Add your color swatches here -->
       <div class="color-swatch" data-name="Pink - Light" style="background-color: #ffc0cb;"></div>
       <div class="color-swatch" data-name="Pink - Dark" style="background-color: #ff69b4;"></div>
       <div class="color-swatch" data-name="Blue - Light" style="background-color: #add8e6;"></div>
       <div class="color-swatch" data-name="Blue - Dark" style="background-color: #4682b4;"></div>
-      <div class="color-swatch" data-name="Yellow - Light" style="background-color: #fffacd;"></div>
-      <div class="color-swatch" data-name="Yellow - Dark" style="background-color: #ffd700;"></div>
-      <div class="color-swatch" data-name="Green - Light" style="background-color: #98fb98;"></div>
-      <div class="color-swatch" data-name="Green - Dark" style="background-color: #228b22;"></div>
-      <div class="color-swatch" data-name="Peach - Light" style="background-color: #ffe5b4;"></div>
-      <div class="color-swatch" data-name="Peach - Dark" style="background-color: #e6ac72;"></div>
+      <!-- Add the rest here -->
     </div>
   </div>
 
+  <!-- Custom Message -->
   <div class="form-group">
     <label for="customMessage">Add a Custom Message:</label>
     <textarea id="customMessage" rows="3" placeholder="Write your message here..."></textarea>
   </div>
 
+  <!-- Submit -->
   <button class="button" onclick="sendWhatsApp()">Send via WhatsApp</button>
 </div>
+
 
 <a href="https://wa.me/918421951707" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">💬</a>
 
