@@ -304,38 +304,45 @@
 
 /*features*/
 
-    .features {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 30px;
-      padding: 40px 0;
-      text-align: center;
-    }
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
 
-    .feature-item {
-      width: 120px;
-    }
+  .feature-item {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+  }
 
-    .feature-item img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 10px;
-    }
+  .feature-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+  }
 
-    .feature-item p {
-      margin: 0;
-      font-size: 14px;
-      font-weight: bold;
-      color: #333;
-    }
+  .feature-item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 5px 0;
+    background: rgba(0, 128, 0, 0.7); /* green background with transparency */
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
-    @media (max-width: 600px) {
-      .features {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+  .feature-item:hover p {
+    opacity: 1;
+  }
 
 
 
@@ -445,7 +452,7 @@
   <div class="features">
     <div class="feature-item">
       <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897223/677174db-a27f-4939-b4fb-3dc866f87d0a_ech0jf.png" alt="Non Toxic">
-      <p>NON TOXIC</p>
+      <p>NON TOXIC hgvtgiukn hvytg98in hbuiollm, </p>
     </div>
     <div class="feature-item">
       <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897506/ChatGPT_Image_Apr_17_2025_07_14_25_PM_hhp9ch.png" alt="Organic Aroma">
