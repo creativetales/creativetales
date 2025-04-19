@@ -96,42 +96,44 @@
 
 
 /*slider*/
-.slider-wrapper {
+.slider-container {
   width: 100%;
   max-width: 1200px;
-  aspect-ratio: 16 / 6;
-  overflow: hidden;
-  margin: 30px auto;
+  margin: 40px auto;
   border-radius: 15px;
+  overflow: hidden;
   position: relative;
+  aspect-ratio: 16/6;
 }
 
-.slider {
+.slider-track {
   display: flex;
   width: 300%;
   height: 100%;
   animation: slideFade 15s infinite;
 }
 
-.slider img {
+.slider-track img {
   width: 100%;
-  height: auto;
-  flex: 0 0 100%;
+  height: 100%;
   object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 15px;
 }
 
-/* Animation for sliding + fading */
 @keyframes slideFade {
-  0% { transform: translateX(0%); opacity: 1; }
-  25% { transform: translateX(0%); opacity: 1; }
-
-  33% { transform: translateX(-100%); opacity: 1; }
-  58% { transform: translateX(-100%); opacity: 1; }
-
-  66% { transform: translateX(-200%); opacity: 1; }
-  91% { transform: translateX(-200%); opacity: 1; }
-
-  100% { transform: translateX(0%); opacity: 1; }
+  0%, 25% {
+    transform: translateX(0%);
+  }
+  33.33%, 58.33% {
+    transform: translateX(-100%);
+  }
+  66.66%, 91.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 
