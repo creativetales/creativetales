@@ -96,31 +96,44 @@
 
 
 /*slider*/
-    .slider-container {
-  position: relative;
+.slider-wrapper {
   width: 100%;
   max-width: 1200px;
-  height: auto; /* allow flexible height */
-  aspect-ratio: 16 / 6; /* keep it nicely wide and responsive */
+  aspect-ratio: 16 / 6;
+  overflow: hidden;
   margin: 30px auto;
   border-radius: 15px;
-  overflow: hidden;
-  background: #f5f5f5;
+  position: relative;
 }
 
-.fade-slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  animation: fade 25s infinite;
-  transition: opacity 1s ease-in-out;
-}
-
-.fade-slide img {
-  width: 100%;
+.slider {
+  display: flex;
+  width: 300%;
   height: 100%;
-  object-fit: cover; /* or 'contain' if you want the full image always shown */
+  animation: slideFade 15s infinite;
 }
+
+.slider img {
+  width: 100%;
+  height: auto;
+  flex: 0 0 100%;
+  object-fit: cover;
+}
+
+/* Animation for sliding + fading */
+@keyframes slideFade {
+  0% { transform: translateX(0%); opacity: 1; }
+  25% { transform: translateX(0%); opacity: 1; }
+
+  33% { transform: translateX(-100%); opacity: 1; }
+  58% { transform: translateX(-100%); opacity: 1; }
+
+  66% { transform: translateX(-200%); opacity: 1; }
+  91% { transform: translateX(-200%); opacity: 1; }
+
+  100% { transform: translateX(0%); opacity: 1; }
+}
+
 
 
 
@@ -433,13 +446,15 @@
 
 
 
-<!----slider--->
-<div class="slider-container">
-  <div class="fade-slide"><img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745080183/Your_paragraph_text_1_iacebo.png" alt="Banner 1" /></div>
-  <div class="fade-slide"><img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745080171/Change_z1aaha.png" alt="Banner 2" /></div>
-  <div class="fade-slide"><img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745081026/Sarah_and_Christian_wyjcrb.png" alt="Banner 3" /></div>
-  <div class="fade-slide"><img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745081007/Your_paragraph_text_2_tpgzfy.png" alt="Banner 4" /></div>
+<!-- Image Slider -->
+<div class="slider-wrapper">
+  <div class="slider">
+    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745080183/Your_paragraph_text_1_iacebo.png" alt="Slide 1">
+    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745080171/Change_z1aaha.png" alt="Slide 2">
+    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745081026/Sarah_and_Christian_wyjcrb.png" alt="Slide 3">
+  </div>
 </div>
+
 
       
 
