@@ -97,7 +97,43 @@
 
 
 
+/* Banner Slider Container */
+    .banner-slider {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      margin-top: 70px; /* adjust if navbar height changes */
+    }
 
+    .slides {
+      display: flex;
+      width: 400%; /* Adjust based on number of images */
+      height: 100%;
+      animation: slide 20s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { margin-left: 0%; }
+      20% { margin-left: 0%; }
+
+      25% { margin-left: -100%; }
+      45% { margin-left: -100%; }
+
+      50% { margin-left: -200%; }
+      70% { margin-left: -200%; }
+
+      75% { margin-left: -300%; }
+      95% { margin-left: -300%; }
+
+      100% { margin-left: 0%; }
+    }
 
 
 
@@ -405,7 +441,14 @@
   </header>
 
 
-
+  <div class="banner-slider">
+    <div class="slides">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745080183/Your_paragraph_text_1_iacebo.png" alt="Banner 1">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745081026/Sarah_and_Christian_wyjcrb.png" alt="Banner 2">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745080171/Change_z1aaha.png" alt="Banner 3">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745125804/Traditional_handmade_methods_mae2zo.png" alt="Banner 4">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745081007/Your_paragraph_text_2_tpgzfy.png" alt="Banner 5">
+    </div>
 
 
 
