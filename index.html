@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creative Tales Store</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
     * {
       margin: 0;
@@ -26,7 +27,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap;
     }
 
@@ -82,7 +83,7 @@
         top: 70px;
         left: 0;
         padding: 10px 0;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
       .nav-links.active {
@@ -97,49 +98,93 @@
 
 
 
-/* Banner Slider Container */
-    .banner-slider {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      overflow: hidden;
-      margin-top: 70px; /* adjust if navbar height changes */
+    /* Banner Slider Container */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    /* Container for the entire carousel - 500px wide, 250px tall */
+    .banner-slider {
+      width: 1000px;
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    /* Container that scrolls horizontally */
     .slides {
       display: flex;
-      width: 400%; /* Adjust based on number of images */
-      height: 100%;
-      animation: slide 20s infinite;
+      width: calc(500px * 5);
+      /* 5 slides, each 500px wide */
+      height: 250px;
+      position: relative;
+      animation: slide 21s ease-in-out infinite;
+      animation-delay: 2s;
     }
 
+    /* Each slide is exactly 500px wide */
     .slides img {
-      width: 100%;
-      height: 100%;
+      width: 500px;
+      height: 250px;
       object-fit: cover;
+      display: block;
     }
 
+    /* Animation showing 2 images at a time */
     @keyframes slide {
-      0% { margin-left: 0%; }
-      20% { margin-left: 0%; }
+      0% {
+        transform: translateX(0);
+      }
 
-      25% { margin-left: -100%; }
-      45% { margin-left: -100%; }
+      /* slides 1 & 2 */
+      14.28% {
+        transform: translateX(-500px);
+      }
 
-      50% { margin-left: -200%; }
-      70% { margin-left: -200%; }
+      /* slides 2 & 3 */
+      28.56% {
+        transform: translateX(-1000px);
+      }
 
-      75% { margin-left: -300%; }
-      95% { margin-left: -300%; }
+      /* slides 3 & 4 */
+      42.84% {
+        transform: translateX(-1500px);
+      }
 
-      100% { margin-left: 0%; }
+      /* slides 4 & 5 */
+
+      /* Reverse */
+      57.12% {
+        transform: translateX(-1000px);
+      }
+
+      /* back to 3 & 4 */
+      71.4% {
+        transform: translateX(-500px);
+      }
+
+      /* back to 2 & 3 */
+      85.68% {
+        transform: translateX(0);
+      }
+
+      /* back to 1 & 2 */
+
+      100% {
+        transform: translateX(0);
+      }
+
+      /* hold position */
     }
 
-
-
-    
     /*Intro*/
-    .intro h2, #home h1, .categories h2, .product-carousel h2 {
+    .intro h2,
+    #home h1,
+    .categories h2,
+    .product-carousel h2 {
       color: #ff6600;
       text-align: center;
       margin-bottom: 20px;
@@ -158,48 +203,48 @@
 
     /*products*/
     .products {
-  text-align: center;
-  padding: 50px 20px;
-}
+      text-align: center;
+      padding: 50px 20px;
+    }
 
-.products h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
-}
+    .products h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
 
-.product-list {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
+    .product-list {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
 
-.product-item {
-  width: 160px;
-  text-align: center;
-}
+    .product-item {
+      width: 160px;
+      text-align: center;
+    }
 
-.product-item img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background-color: #fcece5;
-  padding: 20px;
-  object-fit: contain;
-  transition: transform 0.3s;
-}
+    .product-item img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background-color: #fcece5;
+      padding: 20px;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
 
-.product-item img:hover {
-  transform: scale(1.05);
-}
+    .product-item img:hover {
+      transform: scale(1.05);
+    }
 
-.product-item p {
-  margin-top: 12px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333;
-}
+    .product-item p {
+      margin-top: 12px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #333;
+    }
 
 
     /* FOOTER */
@@ -324,7 +369,8 @@
       font-size: 14px;
       color: #777;
     }
-     /* WhatsApp Button css */
+
+    /* WhatsApp Button css */
     .whatsapp-chat {
       position: fixed;
       bottom: 20px;
@@ -346,85 +392,85 @@
 
 
 
-/*features*/
+    /*features*/
 
     .features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    font-family: Arial, sans-serif;
-  }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      font-family: Arial, sans-serif;
+    }
 
-  .feature-item {
-    position: relative;
-    width: 140px;
-    text-align: center;
-    cursor: pointer;
-  }
+    .feature-item {
+      position: relative;
+      width: 140px;
+      text-align: center;
+      cursor: pointer;
+    }
 
-  .feature-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+    .feature-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
 
-  .feature-name {
-    margin-top: 8px;
-    font-weight: bold;
-    color: #333;
-  }
+    .feature-name {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #333;
+    }
 
-  .feature-description {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 140px;
-    height: 100%;
-    background: rgba(0, 128, 0, 0.85);
-    color: #fff;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    pointer-events: none;
-  }
+    .feature-description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 140px;
+      height: 100%;
+      background: rgba(0, 128, 0, 0.85);
+      color: #fff;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      pointer-events: none;
+    }
 
-  .feature-item:hover .feature-description,
-  .feature-name:hover + .feature-description {
-    opacity: 1;
-    pointer-events: auto;
-  }
+    .feature-item:hover .feature-description,
+    .feature-name:hover+.feature-description {
+      opacity: 1;
+      pointer-events: auto;
+    }
 
 
-.banner {
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
+    .banner {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
 
-.banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-    
-    
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
   <header>
     <nav>
       <div class="logo-container">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Logo" class="logo-img" />
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png"
+          alt="Creative Tales Logo" class="logo-img" />
         <span class="logo-text">Creative Tales Store</span>
       </div>
       <div class="hamburger" onclick="toggleMenu()">
@@ -444,77 +490,91 @@
 
   <div class="banner-slider">
     <div class="slides">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745080183/Your_paragraph_text_1_iacebo.png" alt="Banner 1">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745081026/Sarah_and_Christian_wyjcrb.png" alt="Banner 2">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745080183/Your_paragraph_text_1_iacebo.png"
+        alt="Banner 1">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745081026/Sarah_and_Christian_wyjcrb.png"
+        alt="Banner 2">
       <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745080171/Change_z1aaha.png" alt="Banner 3">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745125804/Traditional_handmade_methods_mae2zo.png" alt="Banner 4">
-      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745081007/Your_paragraph_text_2_tpgzfy.png" alt="Banner 5">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745125804/Traditional_handmade_methods_mae2zo.png"
+        alt="Banner 4">
+      <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745081007/Your_paragraph_text_2_tpgzfy.png"
+        alt="Banner 5">
     </div>
   </div>
-  
+
   <!-- Intro -->
   <section class="intro">
     <h2>Welcome to Creative Tales Store – Where Every Candle Tells a Story</h2>
     <p>
-      Indulge your senses and elevate your space with our handcrafted <strong>premium scented candles</strong> — designed to bring warmth, elegance, and luxury to any room.
-      At Creative Tales Store, we blend the finest waxes with authentic fragrance oils to create candles that burn clean, last longer, and fill your home with captivating aromas.
-      Thoughtfully made, affordably priced, and eco-friendly, our candles are more than just decor—they're a sensory experience. ✨
+      Indulge your senses and elevate your space with our handcrafted <strong>premium scented candles</strong> —
+      designed to bring warmth, elegance, and luxury to any room.
+      At Creative Tales Store, we blend the finest waxes with authentic fragrance oils to create candles that burn
+      clean, last longer, and fill your home with captivating aromas.
+      Thoughtfully made, affordably priced, and eco-friendly, our candles are more than just decor—they're a sensory
+      experience. ✨
     </p>
   </section>
 
-<!-- Products -->
-<section class="products">
-  <h2>Products We Deal In</h2>
-  <div class="product-list">
-    
-    <div class="product-item">
-      <a href="jar_candles.html">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744815064/jar_candle_csp08o.png" alt="Jar Candles" />
-        <p>Jar Candles</p>
-      </a>
+  <!-- Products -->
+  <section class="products">
+    <h2>Products We Deal In</h2>
+    <div class="product-list">
+
+      <div class="product-item">
+        <a href="jar_candles.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744815064/jar_candle_csp08o.png"
+            alt="Jar Candles" />
+          <p>Jar Candles</p>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <a href="diffusers.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744815026/diffusers_ctie9v.png"
+            alt="Diffusers" />
+          <p>Diffusers</p>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <a href="fragrance_bars.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744815038/fragrance_bar_sduvwd.jpg"
+            alt="Fragrance Bars" />
+          <p>Fragrance Bars</p>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <a href="designer_candles.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744815690/designer_candles_pczvah.jpg"
+            alt="Designer Candles" />
+          <p>Designer Candles</p>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <a href="wax_melts.html">
+          <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744815078/wax_melts_rybf7e.jpg"
+            alt="Wax Melts" />
+          <p>Wax Melts</p>
+        </a>
+      </div>
+
+      <div class="product-item">
+        <a href="combos.html">
+          <img
+            src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744816565/WhatsApp_Image_2025-04-16_at_8.45.10_PM_bnil90.jpg"
+            alt="Combos" />
+          <p>Combos</p>
+        </a>
+      </div>
+
     </div>
-
-    <div class="product-item">
-      <a href="diffusers.html">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744815026/diffusers_ctie9v.png" alt="Diffusers" />
-        <p>Diffusers</p>
-      </a>
-    </div>
-
-    <div class="product-item">
-      <a href="fragrance_bars.html">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744815038/fragrance_bar_sduvwd.jpg" alt="Fragrance Bars" />
-        <p>Fragrance Bars</p>
-      </a>
-    </div>
-
-    <div class="product-item">
-      <a href="designer_candles.html">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744815690/designer_candles_pczvah.jpg" alt="Designer Candles" />
-        <p>Designer Candles</p>
-      </a>
-    </div>
-
-    <div class="product-item">
-      <a href="wax_melts.html">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744815078/wax_melts_rybf7e.jpg" alt="Wax Melts" />
-        <p>Wax Melts</p>
-      </a>
-    </div>
-
-    <div class="product-item">
-      <a href="combos.html">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744816565/WhatsApp_Image_2025-04-16_at_8.45.10_PM_bnil90.jpg" alt="Combos" />
-        <p>Combos</p>
-      </a>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 
   </div>
-</section>
+  </section>
 
 
 
@@ -523,64 +583,82 @@
 
 
 
-<div class="banner">
-  <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744900134/creativetalesstore_2_zxtre6.png" alt="Creative Tales Banner">
-</div>
-
-<h2 align="center">Why you can trust us?</h2>
-<div class="features">
-  <div class="feature-item">
-    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897223/677174db-a27f-4939-b4fb-3dc866f87d0a_ech0jf.png" alt="Non Toxic">
-    <div class="feature-name">NON TOXIC</div>
-    <div class="feature-description">Free from harmful chemicals. Safe for everyday use.</div>
-  </div>
-
-  <div class="feature-item">
-    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897232/f4081c19-d9d8-45cf-bb44-8e0e9f826420_aptkjb.png" alt="Natural Scent">
-    <div class="feature-name">NATURAL SCENT</div>
-    <div class="feature-description">Fragrance from natural plant extracts. Fresh and calming.</div>
-  </div>
-
-  <div class="feature-item">
-    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744885805/ChatGPT_Image_Apr_17_2025_03_49_35_PM_ewscb9.png" alt="Reusable Jar">
-    <div class="feature-name">REUSABLE JAR</div>
-    <div class="feature-description">Eco-friendly glass jar. Wash and reuse for storage or decor.</div>
-  </div>
-
-
-  <div class="feature-item">
-    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744910818/ChatGPT_Image_Apr_17_2025_10_53_31_PM_akkrer.png" alt="Freshly Made">
-    <div class="feature-name">FRESHLY MADE</div>
-    <div class="feature-description">Poured fresh in small batches to maintain peak fragrance and quality.</div>
-  </div>
-
-  <div class="feature-item">
-    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744910821/ChatGPT_Image_Apr_17_2025_10_44_16_PM_uxagfz.png" alt="Long Lasting Aroma">
-    <div class="feature-name">LONG LASTING AROMA</div>
-    <div class="feature-description">Rich scent throw that fills your room and lingers for hours.</div>
-  </div>
-
-  <div class="feature-item">
-    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744910812/ChatGPT_Image_Apr_17_2025_10_01_33_PM_gj2t2t.png" alt="Strict Quality Control">
-    <div class="feature-name">STRICT QUALITY CONTROL</div>
-    <div class="feature-description">Every candle is inspected to ensure premium quality and consistency.</div>
-  </div>
-
-  <div class="feature-item">
-    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744910813/ChatGPT_Image_Apr_17_2025_10_48_59_PM_ftriej.png" alt="Cruelty Free">
-    <div class="feature-name">CRUELTY FREE</div>
-    <div class="feature-description">Made with care and conscience — no animal-derived ingredients, just pure kindness.</div>
-  </div>
-</div>
-
-
-<!--banner-->
   <div class="banner">
-  <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745125813/Trim_the_wick_to_about_inch_each_time_bp3ff3.png" alt="Creative Tales Banner">
-</div>
+    <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744900134/creativetalesstore_2_zxtre6.png"
+      alt="Creative Tales Banner">
+  </div>
+
+  <h2 align="center">Why you can trust us?</h2>
+  <div class="features">
+    <div class="feature-item">
+      <img
+        src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897223/677174db-a27f-4939-b4fb-3dc866f87d0a_ech0jf.png"
+        alt="Non Toxic">
+      <div class="feature-name">NON TOXIC</div>
+      <div class="feature-description">Free from harmful chemicals. Safe for everyday use.</div>
+    </div>
+
+    <div class="feature-item">
+      <img
+        src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744897232/f4081c19-d9d8-45cf-bb44-8e0e9f826420_aptkjb.png"
+        alt="Natural Scent">
+      <div class="feature-name">NATURAL SCENT</div>
+      <div class="feature-description">Fragrance from natural plant extracts. Fresh and calming.</div>
+    </div>
+
+    <div class="feature-item">
+      <img
+        src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744885805/ChatGPT_Image_Apr_17_2025_03_49_35_PM_ewscb9.png"
+        alt="Reusable Jar">
+      <div class="feature-name">REUSABLE JAR</div>
+      <div class="feature-description">Eco-friendly glass jar. Wash and reuse for storage or decor.</div>
+    </div>
 
 
-  
+    <div class="feature-item">
+      <img
+        src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744910818/ChatGPT_Image_Apr_17_2025_10_53_31_PM_akkrer.png"
+        alt="Freshly Made">
+      <div class="feature-name">FRESHLY MADE</div>
+      <div class="feature-description">Poured fresh in small batches to maintain peak fragrance and quality.</div>
+    </div>
+
+    <div class="feature-item">
+      <img
+        src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744910821/ChatGPT_Image_Apr_17_2025_10_44_16_PM_uxagfz.png"
+        alt="Long Lasting Aroma">
+      <div class="feature-name">LONG LASTING AROMA</div>
+      <div class="feature-description">Rich scent throw that fills your room and lingers for hours.</div>
+    </div>
+
+    <div class="feature-item">
+      <img
+        src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744910812/ChatGPT_Image_Apr_17_2025_10_01_33_PM_gj2t2t.png"
+        alt="Strict Quality Control">
+      <div class="feature-name">STRICT QUALITY CONTROL</div>
+      <div class="feature-description">Every candle is inspected to ensure premium quality and consistency.</div>
+    </div>
+
+    <div class="feature-item">
+      <img
+        src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744910813/ChatGPT_Image_Apr_17_2025_10_48_59_PM_ftriej.png"
+        alt="Cruelty Free">
+      <div class="feature-name">CRUELTY FREE</div>
+      <div class="feature-description">Made with care and conscience — no animal-derived ingredients, just pure
+        kindness.</div>
+    </div>
+  </div>
+
+
+  <!--banner-->
+  <div class="banner">
+    <img
+      src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745125813/Trim_the_wick_to_about_inch_each_time_bp3ff3.png"
+      alt="Creative Tales Banner">
+  </div>
+
+
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -611,8 +689,10 @@
     <div class="footer-container">
       <!-- Logo and About -->
       <div class="footer-section brand">
-        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png" alt="Creative Tales Store Logo" class="logo">
-        <p class="description">Welcome to Creative Tales Store, your ultimate destination for creating serene and fragrant environments.</p>
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1744257038/creativetaleslogo_wfjyui.png"
+          alt="Creative Tales Store Logo" class="logo">
+        <p class="description">Welcome to Creative Tales Store, your ultimate destination for creating serene and
+          fragrant environments.</p>
       </div>
 
       <!-- Quick Links -->
@@ -621,7 +701,7 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="contact_us.html">Contact Us</a></li>
-           <li><a href="faq.html">FAQS</a></li>
+          <li><a href="faq.html">FAQS</a></li>
           <li><a href="privacy_policy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms & Conditions</a></li>
           <li><a href="returns.html">Returns & Exchange Policy</a></li>
@@ -646,7 +726,8 @@
       <a href="https://instagram.com/creativetalesstore" target="_blank">
         <i class="fab fa-instagram"></i> @creativetalesstore
       </a>
-      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details." target="_blank">
+      <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20the%20details."
+        target="_blank">
         <i class="fab fa-whatsapp"></i> Chat on WhatsApp
       </a>
     </div>
@@ -661,15 +742,12 @@
     }
   </script>
   <!-- WhatsApp Button html -->
-  <a
-    href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20details."
-    class="whatsapp-chat"
-    target="_blank"
-    aria-label="Chat with us on WhatsApp"
-  >
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat"/>
+  <a href="https://wa.me/918421951707?text=Hi%20Creative%20Tales%20Store!%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services.%20Please%20share%20details."
+    class="whatsapp-chat" target="_blank" aria-label="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
   </a>
 
 
 </body>
+
 </html>
