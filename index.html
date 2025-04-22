@@ -146,19 +146,25 @@ body {
 /* Keyframes for smooth sliding */
 @keyframes slide {
   0% {
-    transform: translateX(0);            /* Slide 1 */
+    transform: translateX(0);             /* Slide 1 */
   }
   16.66% {
-    transform: translateX(-500px);       /* Slide 2 */
+    transform: translateX(-500px);        /* Slide 2 */
   }
   33.33% {
-    transform: translateX(-1000px);      /* Slide 3 */
+    transform: translateX(-1000px);       /* Slide 3 */
   }
   50% {
-    transform: translateX(-1500px);      /* Slide 4 */
+    transform: translateX(-1500px);       /* Slide 4 */
+  }
+  66.66% {
+    transform: translateX(-1000px);       /* Back to Slide 3 */
+  }
+  83.33% {
+    transform: translateX(-500px);        /* Back to Slide 2 */
   }
   100% {
-    transform: translateX(0);            /* Instantly jump to Slide 1 */
+    transform: translateX(0);             /* Back to Slide 1 */
   }
 }
     /*Intro*/
