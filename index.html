@@ -131,7 +131,7 @@ body {
   display: flex;
   width: calc(500px * 6); /* Total width for 5 slides */
   height: 250px;
-  animation: slide 28s ease-in-out infinite;
+  animation: slide 24s ease-in-out infinite;
   animation-delay: 2s; 
 }
 
@@ -148,28 +148,48 @@ body {
   0% {
     transform: translateX(0); /* Slide 1 */
   }
-  14.28% {
+
+  12.5% {
     transform: translateX(-500px); /* Slide 2 */
   }
-  28.56% {
+
+  25% {
+    transform: translateX(-500px); /* Hold at Slide 2 */
+  }
+
+  37.5% {
     transform: translateX(-1000px); /* Slide 3 */
   }
-  42.84% {
+
+  50% {
+    transform: translateX(-1000px); /* Hold at Slide 3 */
+  }
+
+  62.5% {
     transform: translateX(-1500px); /* Slide 4 */
   }
-  57.12% {
-    transform: translateX(-1000px); /* Slide 3 */
+
+  75% {
+    transform: translateX(-1500px); /* Hold at Slide 4 */
   }
-  71.4% {
-    transform: translateX(-500px); /* Slide 2 */
+
+  81.25% {
+    transform: translateX(-1000px); /* Back to Slide 3 */
   }
-  85.68% {
-    transform: translateX(0); /* Slide 1 */
+
+  87.5% {
+    transform: translateX(-1000px); /* Hold at Slide 3 */
   }
+
+  93.75% {
+    transform: translateX(-500px); /* Back to Slide 2 */
+  }
+
   100% {
-    transform: translateX(0); /* Pause at Slide 1 briefly */
+    transform: translateX(0); /* Back to Slide 1 */
   }
 }
+
 
     /*Intro*/
     .intro h2,
