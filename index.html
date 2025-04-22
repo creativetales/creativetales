@@ -119,63 +119,56 @@ body {
 
 /* Full-width container for the carousel */
 .banner-slider {
-  width: 100vw; /* full screen width */
+  width: 100vw; /* Fixed width for the slider container */
   height: 250px;
   overflow: hidden;
   position: relative;
+  margin: 0 auto;
 }
 
-/* Container that scrolls horizontally */
+/* Horizontal scrolling container */
 .slides {
   display: flex;
-  width: calc(500px * 5); /* 5 images, each taking up 100vw */
+  width: calc(500px * 5); /* Total width for 5 slides */
   height: 250px;
-  animation: slide 21s ease-in-out infinite;
-  animation-delay: 2s;
+  animation: slide 20s ease-in-out infinite;
 }
 
-/* Each slide image fills the screen width */
+/* Each image takes exactly 500px */
 .slides img {
-  width: 500px;  /* Make each image take up the full viewport width */
+  width: 500px;
   height: 250px;
-  object-fit: cover;  /* Ensure images fill the container while maintaining aspect ratio */
+  object-fit: cover;
   display: block;
 }
 
-/* Animation to cycle through the slides */
+/* Keyframes for smooth sliding */
 @keyframes slide {
   0% {
     transform: translateX(0);
   }
 
-  14.28% {
-    transform: translateX(-100vw);  /* Move by one full image */
+  20% {
+    transform: translateX(-500px);  /* Slide 2 */
   }
 
-  28.56% {
-    transform: translateX(-200vw);  /* Move by two full images */
+  40% {
+    transform: translateX(-1000px); /* Slide 3 */
   }
 
-  42.84% {
-    transform: translateX(-300vw);  /* Move by three full images */
+  60% {
+    transform: translateX(-1500px); /* Slide 4 */
   }
 
-  57.12% {
-    transform: translateX(-400vw);  /* Move by four full images */
-  }
-
-  71.4% {
-    transform: translateX(-300vw);  /* Move back to three images */
-  }
-
-  85.68% {
-    transform: translateX(-200vw);  /* Move back to two images */
+  80% {
+    transform: translateX(-2000px); /* Slide 5 */
   }
 
   100% {
-    transform: translateX(0);  /* Reset to the first image */
+    transform: translateX(0);       /* Loop back to Slide 1 */
   }
 }
+
 
     /*Intro*/
     .intro h2,
