@@ -144,52 +144,38 @@ body {
 }
 
 /* Keyframes for smooth sliding */
+.banner-slider:hover .slides {
+  animation-play-state: paused;
+}
 @keyframes slide {
   0% {
-    transform: translateX(0); /* Slide 1 */
+    transform: translateX(0); /* 1-3 */
   }
 
-  12.5% {
-    transform: translateX(-500px); /* Slide 2 */
+  16.66% {
+    transform: translateX(-500px); /* 2-4 */
   }
 
-  25% {
-    transform: translateX(-500px); /* Hold at Slide 2 */
-  }
-
-  37.5% {
-    transform: translateX(-1000px); /* Slide 3 */
+  33.33% {
+    transform: translateX(-1000px); /* 3-5 */
   }
 
   50% {
-    transform: translateX(-1000px); /* Hold at Slide 3 */
+    transform: translateX(-500px); /* back to 2-4 */
   }
 
-  62.5% {
-    transform: translateX(-1500px); /* Slide 4 */
+  66.66% {
+    transform: translateX(0); /* back to 1-3 */
   }
 
-  75% {
-    transform: translateX(-1500px); /* Hold at Slide 4 */
-  }
-
-  81.25% {
-    transform: translateX(-1000px); /* Back to Slide 3 */
-  }
-
-  87.5% {
-    transform: translateX(-1000px); /* Hold at Slide 3 */
-  }
-
-  93.75% {
-    transform: translateX(-500px); /* Back to Slide 2 */
+  83.33% {
+    transform: translateX(0); /* hold */
   }
 
   100% {
-    transform: translateX(0); /* Back to Slide 1 */
+    transform: translateX(0); /* loop */
   }
 }
-
 
     /*Intro*/
     .intro h2,
