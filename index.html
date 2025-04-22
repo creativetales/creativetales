@@ -131,7 +131,7 @@ body {
   display: flex;
   width: calc(500px * 6); /* Total width for 5 slides */
   height: 250px;
-  animation: slide 25s ease-in-out infinite;
+  animation: slide 28s ease-in-out infinite;
   animation-delay: 2s; 
 }
 
@@ -146,27 +146,31 @@ body {
 /* Keyframes for smooth sliding */
 @keyframes slide {
   0% {
-    transform: translateX(0);             /* Slide 1 */
+    transform: translateX(0); /* Slide 1 */
   }
-  16.66% {
-    transform: translateX(-500px);        /* Slide 2 */
+  14.28% {
+    transform: translateX(-500px); /* Slide 2 */
   }
-  33.33% {
-    transform: translateX(-1000px);       /* Slide 3 */
+  28.56% {
+    transform: translateX(-1000px); /* Slide 3 */
   }
-  50% {
-    transform: translateX(-1500px);       /* Slide 4 */
+  42.84% {
+    transform: translateX(-1500px); /* Slide 4 */
   }
-  66.66% {
-    transform: translateX(-1000px);       /* Back to Slide 3 */
+  57.12% {
+    transform: translateX(-1000px); /* Slide 3 */
   }
-  83.33% {
-    transform: translateX(-500px);        /* Back to Slide 2 */
+  71.4% {
+    transform: translateX(-500px); /* Slide 2 */
+  }
+  85.68% {
+    transform: translateX(0); /* Slide 1 */
   }
   100% {
-    transform: translateX(0);             /* Back to Slide 1 */
+    transform: translateX(0); /* Pause at Slide 1 briefly */
   }
 }
+
     /*Intro*/
     .intro h2,
     #home h1,
