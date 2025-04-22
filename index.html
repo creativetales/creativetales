@@ -131,7 +131,7 @@ body {
   display: flex;
   width: calc(500px * 5); /* Total width for 5 slides */
   height: 250px;
-  animation: slide 20s ease-in-out infinite;
+  animation: slide 25s ease-in-out infinite;
   animation-delay: 2s; 
 }
 
@@ -148,28 +148,25 @@ body {
   0% {
     transform: translateX(0);
   }
-
-  20% {
-    transform: translateX(-500px);  /* Slide 2 */
+  16.66% {
+    transform: translateX(-500px);
   }
-
-  40% {
-    transform: translateX(-1000px); /* Slide 3 */
+  33.33% {
+    transform: translateX(-1000px);
   }
-
-  60% {
-    transform: translateX(-1500px); /* Slide 4 */
+  50% {
+    transform: translateX(-1500px);
   }
-
-  80% {
-    transform: translateX(-2000px); /* Slide 5 */
+  66.66% {
+    transform: translateX(-2000px);
   }
-
+  83.33% {
+    transform: translateX(-2500px); /* shows duplicate of img1 */
+  }
   100% {
-    transform: translateX(0);       /* Loop back to Slide 1 */
+    transform: translateX(0); /* instantly resets to img1 */
   }
 }
-
 
     /*Intro*/
     .intro h2,
@@ -490,6 +487,8 @@ body {
         alt="Banner 4">
       <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745081007/Your_paragraph_text_2_tpgzfy.png"
         alt="Banner 5">
+        <img src="https://res.cloudinary.com/dhy51jkhs/image/upload/v1745080183/Your_paragraph_text_1_iacebo.png"
+        alt="Banner 1 - duplicate">
     </div>
   </div>
 
